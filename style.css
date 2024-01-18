@@ -1,3 +1,17 @@
+:root {
+
+    /* color theme */
+    --primaryColorDark: #191819;
+    --primaryColorLight: #FFF;
+    --primaryColor: #7E1625;
+    --secondaryColorLight: #B2B3B3;
+
+}
+
 * {
     margin: 0;
+}
+
+footer {
+    background-color: var(--primaryColor);
 }
