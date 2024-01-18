@@ -25,8 +25,10 @@ main {
 
 h1,
 h2,
-h3 {
+h3,
+nav {
     font-family: var(--fontUppercase);
+    text-transform: uppercase;
 }
 
 nav {
@@ -35,9 +37,7 @@ nav {
     justify-content: space-between;
 }
 
-nav {
-    text-transform: uppercase;
-}
+
 
 nav ul {
     padding: 10px;
