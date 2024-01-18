@@ -5,18 +5,51 @@
     --primaryColorLight: #FFF;
     --primaryColor: #7E1625;
     --secondaryColorLight: #B2B3B3;
+    /* Font theme */
+    --primaryFont: 'Work Sans', sans-serif;
+    --fontUppercase: 'Poppins', sans-serif;
+
 
 }
 
 * {
     margin: 0;
     color: var(--primaryColorDark);
+    font-family: var(--primaryFont);
 }
 
 main {
     margin: 0 auto;
     width: 80%;
 }
+
+h1,
+h2,
+h3 {
+    font-family: var(--fontUppercase);
+}
+
+nav {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    text-transform: uppercase;
+}
+
+nav ul {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.about-nav {
+    background: linear-gradient(to right, var(--primaryColorLight), var(--secondaryColorLight));
+}
+
 
 
 /* for clarity until carousel script*/
@@ -43,13 +76,13 @@ main {
 
 }
 
-/* ///////////////////////////////// */
 
 #section-carousel .carousel-text * {
 
     position: relative;
 }
 
+/* ///////////////////////////////// */
 
 footer {
     background-color: var(--primaryColor);
