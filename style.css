@@ -10,7 +10,46 @@
 
 * {
     margin: 0;
+    color: var(--primaryColorDark);
 }
+
+main {
+    margin: 0 auto;
+    width: 80%;
+}
+
+
+/* for clarity until carousel script*/
+.block-carousel {
+
+    display: flex;
+    z-index: -2;
+}
+
+#section-carousel article {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+#section-carousel .carousel-text {
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    padding: 10px;
+
+}
+
+/* ///////////////////////////////// */
+
+#section-carousel .carousel-text * {
+
+    position: relative;
+}
+
 
 footer {
     background-color: var(--primaryColor);
