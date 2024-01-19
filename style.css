@@ -5,9 +5,17 @@
     --primaryColorLight: #FFF;
     --primaryColor: #7E1625;
     --secondaryColorLight: #B2B3B3;
+    --bgNavGradientColor: linear-gradient(to left, rgba(25, 24, 25, 0.08) 0%, rgba(25, 24, 25, 0.01) 95.63%, rgba(25, 24, 25, 0.00) 100%);
+
+
+
     /* Font theme */
     --primaryFont: 'Work Sans', sans-serif;
     --fontUppercase: 'Poppins', sans-serif;
+
+    /* spaces */
+    --mainWidthContainer: 80vw;
+
 
 
 }
@@ -18,9 +26,14 @@
     font-family: var(--primaryFont);
 }
 
+
+
+
+
+.main-container,
 main {
-    margin: 0 auto;
-    width: 80%;
+    margin: auto;
+    width: var(--mainWidthContainer);
 }
 
 h1,
@@ -34,20 +47,50 @@ nav {
 nav {
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-
+ul {
+    list-style: none;
+}
 
 nav ul {
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
-    list-style: none;
+
+}
+
+.logo-nav img {
+    /* temp  */
+    width: 188px;
+}
+
+
+.separator>li:not(li:first-child)::before {
+    content: "I";
+
+    margin: auto 10px;
+}
+
+.socials {
+    margin: 0;
+    padding: 0;
 }
 
 .about-nav {
-    background: linear-gradient(to right, var(--primaryColorLight), var(--secondaryColorLight));
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.gradient-bg {
+    background: var(--bgNavGradientColor);
+}
+
+.salon-nav {
+
+    justify-content: end;
 }
 
 
