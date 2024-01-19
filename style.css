@@ -77,6 +77,21 @@ li {
     align-items: center;
 }
 
+
+/*  Une liste qui aura cette class ajoutera un I à gauche sur chaque li avec les espacements spécifiés sauf pour le premier. On peut remplacer I par "|"  et ajouter plus de style dessu
+ mais la police donne le résultat attendu de la maquette */
+.separator>li:not(li:first-child)::before {
+    content: "I";
+    margin-left: var(--separtorSpacing);
+    margin-right: var(--separtorSpacing);
+}
+
+.ticket-icon {
+    padding: 1em;
+}
+
+/*#region ============================== HEADER ==============================*/
+
 /* Je fixe un fond coloré en haut de la page avec la même hauteur que la première ligne de navigation */
 .gradient-bg {
     z-index: -1;
@@ -110,25 +125,7 @@ nav li:last-child {
 }
 
 
-
-/*  Une liste qui aura cette class ajoutera un I à gauche sur chaque li avec les espacements spécifiés sauf pour le premier. On peut remplacer I par "|"  et ajouter plus de style dessu
- mais la police donne le résultat attendu de la maquette */
-.separator>li:not(li:first-child)::before {
-    content: "I";
-    margin-left: var(--separtorSpacing);
-    margin-right: var(--separtorSpacing);
-}
-
-.socials {
-    margin: 0;
-    padding: 0;
-    margin-left: var(--separtorSpacing);
-}
-
-.socials li {
-    padding-left: var(--socialsSpacing);
-}
-
+/* Hauteur partagé avec font coloré fixe */
 .about-nav {
     display: flex;
     justify-content: flex-end;
@@ -141,6 +138,17 @@ nav li:last-child {
 
 
 
+
+
+.socials {
+
+    margin-left: var(--separtorSpacing);
+}
+
+.socials li {
+    padding-left: var(--socialsSpacing);
+}
+
 .salon-nav {
 
     font-size: var(--fontSizeMenuSalon);
@@ -149,24 +157,29 @@ nav li:last-child {
 
 }
 
+
 .salon-nav li {
 
     padding: 1rem var(--menuSpacing);
 }
+
 
 .salon-nav li:last-child {
 
     color: var(--primaryColor)
 }
 
-.ticket-icon {
-    padding: 1em;
-}
-
 nav .ticket-icon {
     padding: 0 0.5em;
 }
 
+/*#endregion ============================== HEADER ==============================*/
+
+
+
+
+
+/*#region ============================== CAROUSEL ==============================*/
 
 /* for clarity until carousel script*/
 .block-carousel {
@@ -198,8 +211,13 @@ nav .ticket-icon {
     position: relative;
 }
 
-/* ///////////////////////////////// */
+/*#endregion ============================== CAROUSEL ==============================*/
+
+
+/*#region ============================== FOOTER ==============================*/
 
 footer {
     background-color: var(--primaryColor);
 }
+
+/*#endregion ============================== FOOTER ==============================*/
