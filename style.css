@@ -30,25 +30,27 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
 
 }
 
-
 /* Je vais du plus général au plus détaillé pour la priorité et la lisibilité du code. Je vais aussi de haut en bas de mon code html*/
 * {
-    margin: 0;
     /* Je ne sais pas si c'est une bonne pratique, je veux juste être sur que je controle bien mes margin et padding */
+    margin: 0;
     padding: 0;
+    /*  */
     color: var(--primaryColorDark);
     font-family: var(--primaryFont);
 }
 
-.main-container,
+/* espacement marge du site*/
 main,
 nav {
     margin-left: auto;
     margin-right: auto;
     width: var(--mainWidthContainer);
-
 }
 
+
+/* je généralise les titres, des détails sont à ajouter, je les ajoutes plus tards en dessous. 
+j'en profite pour inclure nav car il partage ces propriétés (c'est suffisemment haut dans le code pour s'en appercevoir*/
 h1,
 h2,
 h3,
@@ -65,6 +67,7 @@ nav {
 
 }
 
+/*La maquette ne présente aucune puce de liste, il est donc safe de généraliser*/
 ul {
     list-style: none;
 }
@@ -73,6 +76,18 @@ li {
     display: flex;
     align-items: center;
 }
+
+/* Je fixe un fond coloré en haut de la page avec la même hauteur que la première ligne de navigation */
+.gradient-bg {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: var(--menuAboutHeight);
+    background: var(--bgNavGradientColor);
+}
+
 
 nav ul {
 
@@ -83,11 +98,12 @@ nav ul {
 }
 
 
-
+/* J'alligne le menu avec la marge à droite */
 nav li:last-child {
     padding-right: 0;
 }
 
+/* ne fonctionne que si .logo-nav est un enfant d'un block en display flex */
 .logo-nav {
     align-self: center;
 
@@ -95,10 +111,10 @@ nav li:last-child {
 
 
 
-
+/*  Une liste qui aura cette class ajoutera un I à gauche sur chaque li avec les espacements spécifiés sauf pour le premier. On peut remplacer I par "|"  et ajouter plus de style dessu
+ mais la police donne le résultat attendu de la maquette */
 .separator>li:not(li:first-child)::before {
     content: "I";
-
     margin-left: var(--separtorSpacing);
     margin-right: var(--separtorSpacing);
 }
@@ -123,15 +139,7 @@ nav li:last-child {
 
 }
 
-.gradient-bg {
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: var(--menuAboutHeight);
-    background: var(--bgNavGradientColor);
-}
+
 
 .salon-nav {
 
