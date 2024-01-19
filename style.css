@@ -48,6 +48,8 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --paddingTextContent: 3rem;
     --fontSizeLastPartTextContent: 0.75em;
     --lineHeightLastPartTextContent: 2;
+    /* section stats */
+    --paddingStatBlock: 2rem 1rem;
     /* =========
     === FONT ===
     ==========*/
@@ -105,7 +107,6 @@ h6 {
 
 h1,
 h2,
-h3,
 nav,
 .learn-more,
 .cta {
@@ -368,6 +369,32 @@ nav .ticket-icon {
 }
 
 /*#endregion ============================== PRESENTATION ==============================*/
+
+/*#region ============================== STATS ==============================*/
+#section-stats article {
+    background-image: url("assets/img/black_grape_bg.jpg");
+    display: flex;
+    color: var(--primaryColorLight)
+}
+
+.stat-block {
+    padding: var(--paddingStatBlock);
+
+}
+
+.stat-block p,
+.stat-block h3 {
+    color: var(--primaryColorLight)
+}
+
+h3 strong::after {
+    content: "\a";
+    white-space: pre;
+
+}
+
+/*#endregion ============================== STATS ==============================*/
+
 /*#region ============================== NEWSLETTER ==============================*/
 
 #section-newsletter .cta {
