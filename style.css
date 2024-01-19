@@ -23,6 +23,13 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --socialsSpacing: 0.5rem;
 
     /* font */
+    --hOneFontSize: 1em;
+    --hTwoFontSize: 0.875em;
+    --strongerTitlePart: 3em;
+    /* sauter de ligne dans les titres h2 */
+    --lineHeightHTwo: 0.9;
+
+
     --fontSizeMenuAbout: 0.5rem;
     --fontWeightMenuAbout: 500;
     --fontSizeMenuSalon: 0.80rem;
@@ -40,14 +47,18 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     font-family: var(--primaryFont);
 }
 
-/* espacement marge du site*/
-main,
-nav {
-    margin-left: auto;
-    margin-right: auto;
-    width: var(--mainWidthContainer);
-}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 
+    font-size: 2em;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1em;
+}
 
 /* je généralise les titres, des détails sont à ajouter, je les ajoutes plus tards en dessous. 
 j'en profite pour inclure nav car il partage ces propriétés (c'est suffisemment haut dans le code pour s'en appercevoir*/
@@ -57,6 +68,37 @@ h3,
 nav {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
+}
+
+h2 {
+    color: var(--primaryColor);
+    font-size: var(--hTwoFontSize);
+}
+
+
+/* espacement marge du site*/
+main,
+nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--mainWidthContainer);
+}
+
+
+
+
+h2 strong {
+    font-family: var(--primaryFont);
+    text-transform: none;
+    font-size: var(--strongerTitlePart);
+    font-weight: 400;
+    line-height: var(--lineHeightHTwo);
+}
+
+h2 strong::before {
+    content: "\a";
+    white-space: pre;
+
 }
 
 nav {
@@ -171,10 +213,6 @@ nav .ticket-icon {
 
 /*#endregion ============================== HEADER ==============================*/
 
-
-
-
-
 /*#region ============================== CAROUSEL ==============================*/
 
 /* for clarity until carousel script*/
@@ -208,6 +246,11 @@ nav .ticket-icon {
 
 /*#endregion ============================== CAROUSEL ==============================*/
 
+/*#region ============================== PRESENTATION ==============================*/
+
+#section-presentation {}
+
+/*#endregion ============================== PRESENTATION ==============================*/
 
 /*#region ============================== FOOTER ==============================*/
 
