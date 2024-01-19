@@ -11,7 +11,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --primaryColor: #7E1625;
     --secondaryColorLight: #B2B3B3;
     --bgNavGradientColor: linear-gradient(to left, rgba(25, 24, 25, 0.08) 0%, rgba(25, 24, 25, 0.01) 95.63%, rgba(25, 24, 25, 0.00) 100%);
-
+    --bgStatsDarken: #000A;
 
 
     /* Font theme */
@@ -48,6 +48,9 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --paddingTextContent: 3rem;
     --fontSizeLastPartTextContent: 0.75em;
     --lineHeightLastPartTextContent: 2;
+    /* section stats */
+    --spacingStatBlock: 1rem;
+    --paddingH3Strong: 0.2em;
     /* =========
     === FONT ===
     ==========*/
@@ -56,12 +59,16 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --hTwoFontSize: 0.8em;
     /* deuxieme partie des titre h2 en plus gros */
     --strongerTitlePart: 3em;
-    /* sauter de ligne dans les titres h2 */
+    /* hauteur sauter de ligne dans les titres h2 */
     --lineHeightHTwo: 1.1;
+    /* menu */
     --fontSizeMenuAbout: 0.5rem;
     --fontWeightMenuAbout: 500;
     --fontSizeMenuSalon: 0.80rem;
     --fontWeightMenuSalon: 600;
+    /* section stats */
+    --weightH3Stats: 600;
+
 
     /* CTA */
     --paddingCTAHor: 2.5em;
@@ -105,7 +112,6 @@ h6 {
 
 h1,
 h2,
-h3,
 nav,
 .learn-more,
 .cta {
@@ -135,6 +141,11 @@ h1 {
 
 h2 {
     color: var(--primaryColor);
+}
+
+h2,
+h3 {
+
     font-size: var(--hTwoFontSize);
 }
 
@@ -368,6 +379,68 @@ nav .ticket-icon {
 }
 
 /*#endregion ============================== PRESENTATION ==============================*/
+
+/*#region ============================== STATS ==============================*/
+#section-stats article {
+    background-image: url("assets/img/black_grape_bg.jpg");
+    background-color: var(--bgStatsDarken);
+    background-blend-mode: darken;
+    display: flex;
+    color: var(--primaryColorLight);
+
+}
+
+.stat-block {
+    margin: calc(var(--spacingStatBlock)*3) var(--spacingStatBlock);
+    padding-right: var(--spacingStatBlock);
+
+}
+
+.stat-block p:last-of-type {
+
+    font-size: var(--fontSizeLastPartTextContent);
+}
+
+.stat-block:not(.stat-block:last-child) {
+    border-right: dotted 1px var(--secondaryColorLight);
+}
+
+.stat-block h3 {
+    font-family: var(--fontUppercase);
+    text-transform: uppercase;
+    font-weight: var(--weightH3Stats);
+    margin-bottom: var(--spacingStatBlock);
+
+}
+
+.stat-block p,
+.stat-block h3 {
+    color: var(--primaryColorLight);
+
+}
+
+h3 strong {
+
+    color: var(--primaryColor);
+    font-size: var(--hOneFontSize);
+    font-weight: inherit;
+    padding: var(--paddingH3Strong);
+}
+
+h3 strong sup {
+    color: var(--primaryColor);
+    font-size: 0.5em;
+    text-transform: none;
+}
+
+h3 strong::after {
+    content: "\a";
+    white-space: pre;
+
+}
+
+/*#endregion ============================== STATS ==============================*/
+
 /*#region ============================== NEWSLETTER ==============================*/
 
 #section-newsletter .cta {
