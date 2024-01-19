@@ -64,8 +64,8 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --fontWeightMenuSalon: 600;
 
     /* CTA */
-    --paddingCTAHor: 1.5em;
-    --paddingCTA: calc(var(--paddingCTAHor)/1.2) var(--paddingCTAHor);
+    --paddingCTAHor: 2.5em;
+    --paddingCTA: calc(var(--paddingCTAHor)/2) var(--paddingCTAHor);
     --weightCTA: 600;
     --fontSizeCTA: 0.7rem;
     --borderThicknessCTA: 1px;
