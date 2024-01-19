@@ -1,3 +1,5 @@
+/* Les variables globales permettant à un designer de changer les valeurs des variables sans devoir aller dans le coeur du code,
+ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le code.*/
 :root {
 
     /* color theme */
@@ -28,8 +30,12 @@
 
 }
 
+
+/* Je vais du plus général au plus détaillé pour la priorité et la lisibilité du code. Je vais aussi de haut en bas de mon code html*/
 * {
     margin: 0;
+    /* Je ne sais pas si c'est une bonne pratique, je veux juste être sur que je controle bien mes margin et padding */
+    padding: 0;
     color: var(--primaryColorDark);
     font-family: var(--primaryFont);
 }
