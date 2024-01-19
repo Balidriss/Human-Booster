@@ -1,9 +1,7 @@
 /* Les variables globales permettant à un designer de changer les valeurs des variables sans devoir aller dans le coeur du code,
 ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le code.*/
 
-/* Menu About = 1ere ligne nav 
-    Menu Salon = 2eme ligne nav
-*/
+
 
 :root {
 
@@ -20,8 +18,24 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --primaryFont: 'Poppins', sans-serif;
     --fontUppercase: 'Work Sans', sans-serif;
 
-    /*====SPACE==== */
-    --mainWidthContainer: 80vw;
+    /* 
+    
+    Menu About = 1ere ligne nav 
+    Menu Salon = 2eme ligne nav
+
+    */
+
+    /* ==========
+    ====SPACE==== 
+    ============
+
+    1241px est la largeur entre les marges de la maquette
+    */
+    --mainWidthContainer: 1241px;
+    /* sections */
+    --paddingSection: 2em;
+    /* articles */
+    --paddingSection: 2em;
     /* menu 1ere ligne */
     --separtorSpacing: 1rem;
     --menuAboutHeight: 2rem;
@@ -29,10 +43,16 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /* menu 2nd ligne*/
     --menuSpacing: 2rem;
     --paddingMenuSalonLi: calc(var(--menuSpacing)/2) var(--menuSpacing);
-
-
-    /* font */
-    --hOneFontSize: 1em;
+    /* contenus texts */
+    /* gros block de text des sections */
+    --paddingTextContent: 3rem;
+    --fontSizeLastPartTextContent: 0.75em;
+    --lineHeightLastPartTextContent: 2;
+    /* =========
+    === FONT ===
+    ==========*/
+    --primaryFontSize: 1.125;
+    --hOneFontSize: 3.25em;
     --hTwoFontSize: 0.8em;
     /* deuxieme partie des titre h2 en plus gros */
     --strongerTitlePart: 3em;
@@ -49,12 +69,14 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --weightCTA: 600;
     --fontSizeCTA: 0.7rem;
     --borderThicknessCTA: 1px;
-    --borderRadiusCTA: 30px;
+    --borderRadiusCTA: 2em;
 
 
 
 
 }
+
+/*#region ============================== GENERAL ==============================*/
 
 /* Je vais du plus général au plus détaillé une meilleur  visibilité du code en terme de priorité. Aussi je suis mon code html de haut en bas*/
 * {
@@ -64,6 +86,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /*  */
     color: var(--primaryColorDark);
     font-family: var(--primaryFont);
+    font-size: var(--primaryFontSize);
 }
 
 h1,
@@ -79,8 +102,7 @@ h6 {
     font-size: 1em;
 }
 
-/* je généralise les titres, des détails sont à ajouter, je les ajoutes plus tards en dessous. 
-j'en profite pour inclure nav car il partage ces propriétés (c'est suffisemment haut dans le code pour s'en appercevoir*/
+
 h1,
 h2,
 h3,
@@ -89,6 +111,26 @@ nav,
 .cta {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
+}
+
+section {
+    padding: var(--paddingSection) 0;
+}
+
+/* premiere section de la page */
+section:first-child {
+    padding-top: 0;
+
+}
+
+article {
+    padding: var(--paddingArticle) 0;
+}
+
+h1 {
+    font-size: var(--hOneFontSize);
+    font-family: var(--primaryFont);
+    text-transform: none;
 }
 
 h2 {
@@ -176,6 +218,16 @@ li {
 .ticket-icon {
     padding: 1em;
 }
+
+.text-content {
+    padding: 0 var(--paddingTextContent);
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/*#endregion ============================== GENERAL ==============================*/
 
 /*#region ============================== HEADER ==============================*/
 
@@ -293,7 +345,27 @@ nav .ticket-icon {
 
 /*#region ============================== PRESENTATION ==============================*/
 
-#section-presentation {}
+#section-presentation article {
+    display: flex;
+}
+
+#section-presentation figure {
+    display: flex;
+    order: 3;
+}
+
+#section-presentation figure:first-child {
+    order: 0;
+}
+
+
+
+
+#section-presentation .text-content p:last-of-type {
+
+    font-size: var(--fontSizeLastPartTextContent);
+    line-height: var(--lineHeightLastPartTextContent);
+}
 
 /*#endregion ============================== PRESENTATION ==============================*/
 /*#region ============================== NEWSLETTER ==============================*/
