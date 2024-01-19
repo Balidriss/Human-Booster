@@ -24,10 +24,10 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
 
     /* font */
     --hOneFontSize: 1em;
-    --hTwoFontSize: 0.875em;
+    --hTwoFontSize: 0.8em;
     --strongerTitlePart: 3em;
     /* sauter de ligne dans les titres h2 */
-    --lineHeightHTwo: 0.9;
+    --lineHeightHTwo: 1.1;
 
 
     --fontSizeMenuAbout: 0.5rem;
@@ -65,7 +65,8 @@ j'en profite pour inclure nav car il partage ces propriétés (c'est suffisemmen
 h1,
 h2,
 h3,
-nav {
+nav,
+.learn-more {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
 }
@@ -84,7 +85,9 @@ nav {
     width: var(--mainWidthContainer);
 }
 
-
+.learn-more p {
+    color: var(--primaryColor)
+}
 
 
 h2 strong {
