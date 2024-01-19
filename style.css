@@ -10,13 +10,21 @@
 
 
     /* Font theme */
-    --primaryFont: 'Work Sans', sans-serif;
-    --fontUppercase: 'Poppins', sans-serif;
+    --primaryFont: 'Poppins', sans-serif;
+    --fontUppercase: 'Work Sans', sans-serif;
 
     /* spaces */
     --mainWidthContainer: 80vw;
+    --menuSpacing: 2rem;
+    --separtorSpacing: 1rem;
+    --menuAboutHeight: 2rem;
+    --socialsSpacing: 0.5rem;
 
-
+    /* font */
+    --fontSizeMenuAbout: 0.5rem;
+    --fontWeightMenuAbout: 500;
+    --fontSizeMenuSalon: 0.80rem;
+    --fontWeightMenuSalon: 600;
 
 }
 
@@ -26,14 +34,13 @@
     font-family: var(--primaryFont);
 }
 
-
-
-
-
 .main-container,
-main {
-    margin: auto;
+main,
+nav {
+    margin-left: auto;
+    margin-right: auto;
     width: var(--mainWidthContainer);
+
 }
 
 h1,
@@ -47,52 +54,104 @@ nav {
 nav {
 
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 ul {
     list-style: none;
 }
 
+li {
+    display: flex;
+    align-items: center;
+}
+
 nav ul {
-    padding: 10px;
+
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 
 }
 
-.logo-nav img {
-    /* temp  */
-    width: 188px;
+
+
+nav li:last-child {
+    padding-right: 0;
 }
+
+.logo-nav {
+    align-self: center;
+
+}
+
+
 
 
 .separator>li:not(li:first-child)::before {
     content: "I";
 
-    margin: auto 10px;
+    margin-left: var(--separtorSpacing);
+    margin-right: var(--separtorSpacing);
 }
 
 .socials {
     margin: 0;
     padding: 0;
+    margin-left: var(--separtorSpacing);
+}
+
+.socials li {
+    padding-left: var(--socialsSpacing);
 }
 
 .about-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: var(--fontSizeMenuAbout);
+    font-weight: var(--fontWeightMenuAbout);
+    height: var(--menuAboutHeight);
 
 }
 
 .gradient-bg {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: var(--menuAboutHeight);
     background: var(--bgNavGradientColor);
 }
 
 .salon-nav {
 
+    font-size: var(--fontSizeMenuSalon);
+    font-weight: var(--fontWeightMenuSalon);
     justify-content: end;
+
 }
 
+.salon-nav li {
+
+    padding: 1rem var(--menuSpacing);
+}
+
+.salon-nav li:last-child {
+
+    color: var(--primaryColor)
+}
+
+.ticket-icon {
+    padding: 1em;
+}
+
+nav .ticket-icon {
+    padding: 0 0.5em;
+}
 
 
 /* for clarity until carousel script*/
