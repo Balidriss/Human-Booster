@@ -104,8 +104,9 @@ section {
 }
 
 /* premiere section de la page */
-#section:first-child {
+section:first-child {
     padding-top: 0;
+
 }
 
 article {
