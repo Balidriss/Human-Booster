@@ -1,5 +1,10 @@
 /* Les variables globales permettant à un designer de changer les valeurs des variables sans devoir aller dans le coeur du code,
 ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le code.*/
+
+/* Menu About = 1ere ligne nav 
+    Menu Salon = 2eme ligne nav
+*/
+
 :root {
 
     /* color theme */
@@ -15,29 +20,43 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --primaryFont: 'Poppins', sans-serif;
     --fontUppercase: 'Work Sans', sans-serif;
 
-    /* spaces */
+    /*====SPACE==== */
     --mainWidthContainer: 80vw;
-    --menuSpacing: 2rem;
+    /* menu 1ere ligne */
     --separtorSpacing: 1rem;
     --menuAboutHeight: 2rem;
     --socialsSpacing: 0.5rem;
+    /* menu 2nd ligne*/
+    --menuSpacing: 2rem;
+    --paddingMenuSalonLi: calc(var(--menuSpacing)/2) var(--menuSpacing);
+
 
     /* font */
     --hOneFontSize: 1em;
     --hTwoFontSize: 0.8em;
+    /* deuxieme partie des titre h2 en plus gros */
     --strongerTitlePart: 3em;
     /* sauter de ligne dans les titres h2 */
     --lineHeightHTwo: 1.1;
-
-
     --fontSizeMenuAbout: 0.5rem;
     --fontWeightMenuAbout: 500;
     --fontSizeMenuSalon: 0.80rem;
     --fontWeightMenuSalon: 600;
 
+    /* CTA */
+    --paddingCTAHor: 1.5em;
+    --paddingCTA: calc(var(--paddingCTAHor)/1.2) var(--paddingCTAHor);
+    --weightCTA: 600;
+    --fontSizeCTA: 0.7rem;
+    --borderThicknessCTA: 1px;
+    --borderRadiusCTA: 30px;
+
+
+
+
 }
 
-/* Je vais du plus général au plus détaillé pour la priorité et la lisibilité du code. Je vais aussi de haut en bas de mon code html*/
+/* Je vais du plus général au plus détaillé une meilleur  visibilité du code en terme de priorité. Aussi je suis mon code html de haut en bas*/
 * {
     /* Je ne sais pas si c'est une bonne pratique, je veux juste être sur que je controle bien mes margin et padding */
     margin: 0;
@@ -66,7 +85,8 @@ h1,
 h2,
 h3,
 nav,
-.learn-more {
+.learn-more,
+.cta {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
 }
@@ -76,6 +96,28 @@ h2 {
     font-size: var(--hTwoFontSize);
 }
 
+/* Je généralise le bouton cta */
+.cta {
+    font-size: var(--fontSizeCTA);
+    font-weight: var(--weightCTA);
+    text-decoration: none;
+    color: var(--primaryColorLight);
+    padding: var(--paddingCTA);
+    border: none;
+    border-radius: var(--borderRadiusCTA);
+}
+
+/* Je personalise le bouton cta */
+.cta-red {
+    color: var(--primaryColorLight);
+    background-color: var(--primaryColor);
+}
+
+.cta-white {
+    border: solid var(--borderThicknessCTA);
+    color: var(--primaryColor);
+    background-color: var(--primaryColorLight);
+}
 
 /* espacement marge du site*/
 main,
@@ -198,10 +240,10 @@ nav li:last-child {
 
 }
 
-/* je rend le padding top et bot égale à la moitié de gauche et droite */
+
 .salon-nav li {
 
-    padding: calc(var(--menuSpacing)/2) var(--menuSpacing);
+    padding: var(--paddingMenuSalonLi);
 }
 
 /* Le lien Billetterie en rouge */
@@ -254,6 +296,24 @@ nav .ticket-icon {
 #section-presentation {}
 
 /*#endregion ============================== PRESENTATION ==============================*/
+/*#region ============================== NEWSLETTER ==============================*/
+
+#section-newsletter .cta {
+    border-radius: 0;
+
+}
+
+#section-newsletter [name=email] {
+    border-bottom-left-radius: var(--borderRadiusCTA);
+    border-top-left-radius: var(--borderRadiusCTA);
+}
+
+#section-newsletter [name=subscribe] {
+    border-bottom-right-radius: var(--borderRadiusCTA);
+    border-top-right-radius: var(--borderRadiusCTA);
+}
+
+/*#endregion ============================== NEWSLETTER ==============================*/
 
 /*#region ============================== FOOTER ==============================*/
 
