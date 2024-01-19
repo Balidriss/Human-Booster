@@ -103,7 +103,6 @@ li {
     background: var(--bgNavGradientColor);
 }
 
-
 nav ul {
 
     display: flex;
@@ -136,10 +135,7 @@ nav li:last-child {
 
 }
 
-
-
-
-
+/* List class contenant les logos facebook et insta */
 .socials {
 
     margin-left: var(--separtorSpacing);
@@ -157,13 +153,13 @@ nav li:last-child {
 
 }
 
-
+/* je rend le padding top et bot égale à la moitié de gauche et droite */
 .salon-nav li {
 
-    padding: 1rem var(--menuSpacing);
+    padding: calc(var(--menuSpacing)/2) var(--menuSpacing);
 }
 
-
+/* Le lien Billetterie en rouge */
 .salon-nav li:last-child {
 
     color: var(--primaryColor)
@@ -192,7 +188,6 @@ nav .ticket-icon {
     position: relative;
     overflow: hidden;
 }
-
 
 
 #section-carousel .carousel-text {
