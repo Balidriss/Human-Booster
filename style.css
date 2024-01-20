@@ -661,10 +661,53 @@ td:last-child p {
 
 /*#endregion ============================== TARIFS ============================== */
 
+/*#region ============================== CONTACT ============================== */
+/*#endregion ============================== CONTACT ============================== */
+#section-contact article {
+    color: var(--primaryColorLight);
+    position: relative;
+}
+
+
+#section-contact h2 strong {
+    color: var(--primaryColorLight);
+}
+
+
+
+#section-contact li strong,
+#section-contact h2,
+#section-contact li {
+    color: var(--secondaryColorLight);
+}
+
+#section-contact ul:first-of-type li {
+    color: var(--primaryColorLight);
+}
+
+#section-contact li {
+    margin: 0.5rem;
+}
+
+.overlay-contact {
+    padding: 1.5rem 3rem;
+    background-color: var(--primaryColorDark);
+    position: absolute;
+    bottom: -1rem;
+    right: 0;
+}
+
+
 /*#region ============================== FOOTER ==============================*/
 
 footer {
+    margin-top: 3rem;
     background-color: var(--primaryColor);
+
+}
+
+footer ul {
+    display: flex;
 }
 
 /*#endregion ============================== FOOTER ==============================*/
