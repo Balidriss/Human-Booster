@@ -501,6 +501,25 @@ h3 strong::after {
 
 /*#region ============================== NEWSLETTER ==============================*/
 
+#section-newsletter * {
+
+    color: var(--primaryColorLight);
+}
+
+#section-newsletter {
+
+    text-align: center;
+}
+
+
+#section-newsletter {
+    background-image: url("assets/img/white_grape_bg.jpg");
+    background-color: var(--bgStatsDarken);
+    background-blend-mode: darken;
+
+}
+
+
 #section-newsletter .cta {
     border-radius: 0;
 
