@@ -165,6 +165,7 @@ nav {
 
 /* deuxieme partie des titre h2 qui ont une police différente */
 h2 strong {
+    color: var(--secondaryColorDark);
     font-family: var(--primaryFont);
     text-transform: none;
     font-size: var(--strongerTitlePart);
@@ -357,7 +358,7 @@ section figure:first-child {
 }
 
 section .text-content p:last-of-type {
-
+    color: var(--secondaryColorDark);
     font-size: 0.75em;
     line-height: 2;
 }
