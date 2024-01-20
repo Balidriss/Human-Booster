@@ -318,8 +318,14 @@ nav .ticket-icon {
 /* en attendant le script */
 .block-carousel {
 
-    display: flex;
+
     z-index: -2;
+}
+
+.carousel {
+
+    display: flex;
+
 }
 
 #section-carousel article {
