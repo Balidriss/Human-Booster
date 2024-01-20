@@ -45,7 +45,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --paddingMenuSalonLi: calc(var(--menuSpacing)/2) var(--menuSpacing);
     /* contenus texts */
     /* gros block de text des sections */
-    --paddingTextContent: 3rem;
+    --paddingTextContent: 3.5rem;
     --fontSizeLastPartTextContent: 0.75em;
     --lineHeightLastPartTextContent: 2;
     /* section stats */
@@ -128,6 +128,11 @@ section:first-child {
     padding-top: 0;
 
 }
+
+section article {
+    display: flex;
+}
+
 
 article {
     padding: var(--paddingArticle) 0;
@@ -227,6 +232,14 @@ li {
 }
 
 .ticket-icon {
+    padding: 1em;
+}
+
+.stand-icon {
+    background-color: var(--secondaryColorLight);
+    border-radius: var(--borderRadiusCTA);
+    background-blend-mode: darken;
+    align-items: center;
     padding: 1em;
 }
 
@@ -354,31 +367,32 @@ nav .ticket-icon {
 
 /*#endregion ============================== CAROUSEL ==============================*/
 
-/*#region ============================== PRESENTATION ==============================*/
+/*#region ============================== PRESENTATION + STAND ==============================*/
 
-#section-presentation article {
-    display: flex;
-}
 
-#section-presentation figure {
+section figure {
     display: flex;
     order: 3;
 }
 
-#section-presentation figure:first-child {
+section figure:first-child {
     order: 0;
 }
 
-
-
-
-#section-presentation .text-content p:last-of-type {
+section .text-content p:last-of-type {
 
     font-size: var(--fontSizeLastPartTextContent);
     line-height: var(--lineHeightLastPartTextContent);
 }
 
-/*#endregion ============================== PRESENTATION ==============================*/
+section .text-content .cta {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    width: fit-content;
+}
+
+/*#endregion ============================== PRESENTATION + STAND ==============================*/
 
 /*#region ============================== STATS ==============================*/
 #section-stats article {
