@@ -671,6 +671,7 @@ td:last-child p {
 
 #section-contact h2 strong {
     color: var(--primaryColorLight);
+
 }
 
 
@@ -683,7 +684,7 @@ td:last-child p {
 
 #section-contact ul:first-of-type li {
     color: var(--primaryColorLight);
-    margin: 0.5rem 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
     font-size: var(--primaryFontSize);
 }
 
@@ -716,8 +717,9 @@ td:last-child p {
 
 .contact-details img {
     align-self: flex-start;
-    margin: 0.3em 0.5em 0.3em;
+    margin: 0.3em 0.5em 0.3em 0;
 }
+
 
 /*#region ============================== FOOTER ==============================*/
 
