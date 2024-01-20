@@ -157,9 +157,7 @@ nav {
     width: var(--mainWidthContainer);
 }
 
-.learn-more p {
-    color: var(--primaryColor)
-}
+
 
 /* ======= TODO : Regarder si l'inverse n'est pas mieu */
 
@@ -486,6 +484,15 @@ h3 strong::after {
 
     justify-content: center;
 
+}
+
+.learn-more {
+    color: var(--primaryColor);
+    font-weight: 800;
+    text-underline-offset: 0.3em;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-decoration: underline 0.1em var(--primaryColor);
 }
 
 
