@@ -1,8 +1,6 @@
 /* Les variables globales permettant à un designer de changer les valeurs des variables sans devoir aller dans le coeur du code,
 ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le code.*/
 
-
-
 :root {
 
     /* color theme */
@@ -14,60 +12,20 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --bgStatsDarken: #000A;
 
 
-    /* Font theme */
+    /* Font family */
     --primaryFont: 'Poppins', sans-serif;
     --fontUppercase: 'Work Sans', sans-serif;
 
-    /* 
-    
-    Menu About = 1ere ligne nav 
-    Menu Salon = 2eme ligne nav
-
-    */
-
-    /* ==========
-    ====SPACE==== 
-    ============
-
-    1241px est la largeur entre les marges de la maquette
-    */
-    --mainWidthContainer: 1241px;
-    /* sections */
-    --paddingSection: 2em;
-    /* articles */
-    --paddingSection: 2em;
-    /* menu 1ere ligne */
-    --separtorSpacing: 1rem;
-    --menuAboutHeight: 2rem;
-    --socialsSpacing: 0.5rem;
-    /* menu 2nd ligne*/
-    --menuSpacing: 2rem;
-    --paddingMenuSalonLi: calc(var(--menuSpacing)/2) var(--menuSpacing);
-    /* contenus texts */
-    /* gros block de text des sections */
-    --paddingTextContent: 3.5rem;
-    --fontSizeLastPartTextContent: 0.75em;
-    --lineHeightLastPartTextContent: 2;
-    /* section stats */
-    --spacingStatBlock: 1rem;
-    --paddingH3Strong: 0.2em;
     /* =========
     === FONT ===
     ==========*/
     --primaryFontSize: 1.125;
-    --hOneFontSize: 3.25em;
-    --hTwoFontSize: 0.8em;
+    --hOneFontSize: 3.25rem;
+    --hTwoFontSize: 0.8rem;
     /* deuxieme partie des titre h2 en plus gros */
     --strongerTitlePart: 3em;
     /* hauteur sauter de ligne dans les titres h2 */
     --lineHeightHTwo: 1.1;
-    /* menu */
-    --fontSizeMenuAbout: 0.5rem;
-    --fontWeightMenuAbout: 500;
-    --fontSizeMenuSalon: 0.80rem;
-    --fontWeightMenuSalon: 600;
-    /* section stats */
-    --weightH3Stats: 600;
 
 
     /* CTA */
@@ -80,7 +38,19 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --bgLightOpacity: #ffffff33;
     --bgRedOpacity: #7E162533;
 
+    /*
+    1241px est la largeur entre les marges de la maquette
+    */
+    --mainWidthContainer: 1241px;
 
+
+
+    /* menu 2nd ligne*/
+    --menuSpacing: 2rem;
+    --paddingMenuSalonLi: calc(var(--menuSpacing)/2) var(--menuSpacing);
+
+    /*change l'espacement dans la parti section stat*/
+    --spacingStatBlock: 1rem;
 
 }
 
@@ -121,7 +91,7 @@ nav,
 }
 
 section {
-    padding: var(--paddingSection) 0;
+    padding: 2rem 0;
 }
 
 /* premiere section de la page */
@@ -136,7 +106,7 @@ section article {
 
 
 article {
-    padding: var(--paddingArticle) 0;
+    padding: 2rem 0;
 }
 
 h1 {
@@ -228,8 +198,8 @@ li {
  mais la police donne le résultat attendu de la maquette */
 .separator>li:not(li:first-child)::before {
     content: "I";
-    margin-left: var(--separtorSpacing);
-    margin-right: var(--separtorSpacing);
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .ticket-icon {
@@ -247,7 +217,7 @@ li {
 }
 
 .text-content {
-    padding: 0 var(--paddingTextContent);
+    padding: 0 3.5rem;
     order: 2;
     display: flex;
     flex-direction: column;
@@ -265,7 +235,7 @@ li {
     width: 100%;
     top: 0;
     left: 0;
-    height: var(--menuAboutHeight);
+    height: 2rem;
     background: var(--bgNavGradientColor);
 }
 
@@ -295,26 +265,26 @@ nav li:last-child {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: var(--fontSizeMenuAbout);
-    font-weight: var(--fontWeightMenuAbout);
-    height: var(--menuAboutHeight);
+    font-size: 0.5rem;
+    font-weight: 500;
+    height: 2rem;
 
 }
 
 /* List class contenant les logos facebook et insta */
 .socials {
 
-    margin-left: var(--separtorSpacing);
+    margin-left: 1rem;
 }
 
 .socials li {
-    padding-left: var(--socialsSpacing);
+    padding-left: 0.5rem;
 }
 
 .salon-nav {
 
-    font-size: var(--fontSizeMenuSalon);
-    font-weight: var(--fontWeightMenuSalon);
+    font-size: 0.8rem;
+    font-weight: 600;
     justify-content: end;
 
 }
@@ -349,14 +319,13 @@ nav .ticket-icon {
 #section-carousel article {
     position: relative;
     overflow: hidden;
+    padding: 0;
 }
 
 
 #section-carousel .carousel-text {
 
     position: absolute;
-    top: 10px;
-    left: 10px;
     z-index: 1;
     padding: 10px;
 
@@ -384,8 +353,8 @@ section figure:first-child {
 
 section .text-content p:last-of-type {
 
-    font-size: var(--fontSizeLastPartTextContent);
-    line-height: var(--lineHeightLastPartTextContent);
+    font-size: 0.75em;
+    line-height: 2;
 }
 
 section .text-content p {
@@ -436,7 +405,7 @@ section .text-content p {
 
 .stat-block p:last-of-type {
 
-    font-size: var(--fontSizeLastPartTextContent);
+    font-size: 0.75em;
 }
 
 .stat-block:not(.stat-block:last-child) {
@@ -446,7 +415,7 @@ section .text-content p {
 .stat-block h3 {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
-    font-weight: var(--weightH3Stats);
+    font-weight: 600;
     margin-bottom: var(--spacingStatBlock);
 
 }
@@ -462,7 +431,7 @@ h3 strong {
     color: var(--primaryColor);
     font-size: var(--hOneFontSize);
     font-weight: inherit;
-    padding: var(--paddingH3Strong);
+    padding: 0.2rem;
 }
 
 h3 strong sup {
