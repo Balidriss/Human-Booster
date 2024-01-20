@@ -77,7 +77,8 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --fontSizeCTA: 0.7rem;
     --borderThicknessCTA: 1px;
     --borderRadiusCTA: 2em;
-
+    --bgLightOpacity: #ffffff33;
+    --bgRedOpacity: #7E162533;
 
 
 
@@ -236,11 +237,13 @@ li {
 }
 
 .stand-icon {
-    background-color: var(--secondaryColorLight);
+    background-color: var(--bgLightOpacity);
     border-radius: var(--borderRadiusCTA);
-    background-blend-mode: darken;
+    background-blend-mode: hard-light;
     align-items: center;
     padding: 1em;
+    margin: 0.2em;
+    margin-right: 1em;
 }
 
 .text-content {
@@ -385,12 +388,33 @@ section .text-content p:last-of-type {
     line-height: var(--lineHeightLastPartTextContent);
 }
 
-section .text-content .cta {
+section .text-content p {
+    line-height: 1.3em;
+}
+
+
+#section-stand .text-content p:first-of-type::first-letter {
+
+    font-size: var(--hOneFontSize);
+    color: var(--primaryColor);
+    vertical-align: top;
+    float: left;
+    font-weight: 600;
+    margin-right: 0.1em;
+}
+
+.cta-stand {
     display: flex;
     align-items: center;
     align-self: flex-start;
     width: fit-content;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+
 }
+
+
 
 /*#endregion ============================== PRESENTATION + STAND ==============================*/
 
