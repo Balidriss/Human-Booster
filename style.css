@@ -99,7 +99,7 @@ label[for="email"] {
 }
 
 section {
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 /* premiere section de la page */
@@ -114,7 +114,7 @@ section article {
 
 
 article {
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 h1 {
@@ -584,8 +584,33 @@ label[for="email"] {
 
 /*#region ============================== TARIFS ============================== */
 
-#tarifs .cta-in-icon {
+#section-tarifs .cta-in-icon {
     transform: rotate(15deg);
+}
+
+.text-container {
+    margin: 1rem 3.2rem;
+    margin-top: 2rem;
+}
+
+
+.text-container p {
+    margin: 1rem 3rem;
+    margin-left: 0;
+}
+
+.tarifs-content {
+    display: flex;
+
+}
+
+.tarifs-content figure {
+    width: auto;
+    height: max-content;
+}
+
+#section-tarifs article>figure {
+    margin-top: 2rem;
 }
 
 /*#endregion ============================== TARIFS ============================== */
