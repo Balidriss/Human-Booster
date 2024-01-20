@@ -86,7 +86,8 @@ h1,
 h2,
 nav,
 .learn-more,
-.cta {
+.cta,
+label[for="email"] {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
 }
@@ -500,29 +501,59 @@ h3 strong::after {
 
 
 /*#region ============================== NEWSLETTER ==============================*/
-
-#section-newsletter * {
-
-    color: var(--primaryColorLight);
-}
-
-#section-newsletter {
-
-    text-align: center;
-}
-
-
 #section-newsletter {
     background-image: url("assets/img/white_grape_bg.jpg");
     background-color: var(--bgStatsDarken);
     background-blend-mode: darken;
+    display: flex;
+    flex-direction: column;
 
+}
+
+.block-mail-submit,
+#section-newsletter h2 {
+    text-align: center;
+}
+
+
+#section-newsletter h2,
+#section-newsletter h2 strong {
+
+    color: var(--primaryColorLight);
 }
 
 
 #section-newsletter .cta {
     border-radius: 0;
 
+}
+
+form {
+    margin: 1rem;
+    width: 30%;
+    margin: auto;
+}
+
+form label {
+    text-align: left;
+    color: var(--primaryColorLight);
+    padding-left: 1rem;
+}
+
+.consent-block {
+    padding: 0 1rem;
+}
+
+[for="consent"] {
+    font-weight: 400;
+    font-size: 0.75em;
+    color: var(--secondaryColorLight);
+}
+
+label[for="email"] {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
 }
 
 #section-newsletter [name=email] {
