@@ -48,8 +48,8 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     */
     --mainWidthContainer: 1241px;
 
-
-
+    /* font du header même taille que le menu  */
+    --heightMenuAbout: 2rem;
     /* menu 2nd ligne*/
     --menuSpacing: 2rem;
     --paddingMenuSalonLi: calc(var(--menuSpacing)/2) var(--menuSpacing);
@@ -57,6 +57,8 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /*change l'espacement dans la parti section stat*/
     --spacingStatBlock: 1rem;
 
+    /* footer */
+    --heightFooter: 3rem;
 }
 
 /*#region ============================== GENERAL ==============================*/
@@ -94,7 +96,8 @@ nav,
 .learn-more,
 .cta,
 label[for="email"],
-td:last-child p {
+td:last-child p,
+footer li {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
 }
@@ -185,7 +188,8 @@ h3 {
 
 /* espacement marge du site*/
 main,
-nav {
+nav,
+.block-footer {
     margin-left: auto;
     margin-right: auto;
     width: var(--mainWidthContainer);
@@ -236,6 +240,7 @@ li {
     content: "I";
     margin-left: 1rem;
     margin-right: 1rem;
+    font-weight: 300;
 }
 
 
@@ -260,7 +265,7 @@ li {
     width: 100%;
     top: 0;
     left: 0;
-    height: 2rem;
+    height: var(--heightMenuAbout);
     background: var(--bgNavGradientColor);
 }
 
@@ -292,7 +297,7 @@ nav li:last-child {
     align-items: center;
     font-size: 0.5rem;
     font-weight: 500;
-    height: 2rem;
+    height: var(--heightMenuAbout);
 
 }
 
@@ -732,11 +737,42 @@ td:last-child p {
 footer {
     margin-top: 3rem;
     background-color: var(--primaryColor);
-
+    display: flex;
 }
 
 footer ul {
+
     display: flex;
+}
+
+footer li {
+
+    color: var(--primaryColorLight);
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.block-footer p {
+
+    color: var(--secondaryColorLight);
+    font-size: 0.7rem;
+}
+
+.block-footer {
+    height: var(--heightFooter);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bg {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: var(--heightFooter);
+    background: var(--primaryColor);
 }
 
 /*#endregion ============================== FOOTER ==============================*/
