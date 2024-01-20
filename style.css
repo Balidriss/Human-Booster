@@ -468,6 +468,9 @@ h3 strong::after {
 /*#region ============================== BLOG ==============================*/
 
 /* TODO ======= Carousel */
+
+
+
 #section-blog .carousel {
     overflow-x: hidden;
 }
@@ -475,6 +478,13 @@ h3 strong::after {
 #section-blog article {
     flex-direction: column;
     margin: 0 1rem;
+
+}
+
+#section-blog .cta-container {
+    display: flex;
+
+    justify-content: center;
 
 }
 
