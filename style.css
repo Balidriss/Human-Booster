@@ -30,12 +30,16 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
 
 
     /* CTA */
-    --paddingCTAHor: 2.5em;
-    --paddingCTA: calc(var(--paddingCTAHor)/2) var(--paddingCTAHor);
+    --paddingCTAHeight: 0.8rem;
+    --marginIconCTA: 0.2rem;
+    /* changer la proportionalité entre le padding en hauteur et largeur */
+    --paddingCTARatio: 2.5;
+    --paddingCTA: var(--paddingCTAHeight) calc(var(--paddingCTARatio) * var(--paddingCTAHeight));
+    --paddingIconCTA: calc(var(--paddingCTAHeight) - var(--marginIconCTA));
     --weightCTA: 600;
     --fontSizeCTA: 0.7rem;
-    --borderThicknessCTA: 1px;
-    --borderRadiusCTA: 2em;
+    --borderThicknessCTA: 0.1rem;
+    --borderRadiusCTA: calc(var(--paddingCTAHeight)*2);
     --bgLightOpacity: #ffffff33;
     --bgRedOpacity: #7E162533;
 
@@ -67,6 +71,8 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     font-family: var(--primaryFont);
     font-size: var(--primaryFontSize);
 }
+
+
 
 h1,
 h2,
@@ -150,6 +156,32 @@ h3 {
     background-color: var(--primaryColorLight);
 }
 
+
+.cta-in-icon {
+    background-color: var(--bgLightOpacity);
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    padding: var(--paddingIconCTA);
+    margin: var(--marginIconCTA);
+    margin-right: 1rem;
+
+
+}
+
+.cta-with-icon {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+
+}
+
+
+
+
 /* espacement marge du site*/
 main,
 nav {
@@ -205,19 +237,6 @@ li {
     margin-right: 1rem;
 }
 
-.ticket-icon {
-    padding: 1em;
-}
-
-.stand-icon {
-    background-color: var(--bgLightOpacity);
-    border-radius: var(--borderRadiusCTA);
-    background-blend-mode: hard-light;
-    align-items: center;
-    padding: 1em;
-    margin: 0.2em;
-    margin-right: 1em;
-}
 
 
 /* ======== TODO : ENLEVER FLEX === ajouter de l'espacement a la place */
@@ -308,7 +327,9 @@ nav li:last-child {
 
 nav .ticket-icon {
     padding: 0 0.5em;
+
 }
+
 
 /*#endregion ============================== HEADER ==============================*/
 
@@ -385,16 +406,8 @@ section .text-content p {
     margin-right: 0.1em;
 }
 
-.cta-stand {
-    display: flex;
-    align-items: center;
-    align-self: flex-start;
-    width: fit-content;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
 
-}
+
 
 
 
@@ -567,6 +580,15 @@ label[for="email"] {
 }
 
 /*#endregion ============================== NEWSLETTER ==============================*/
+
+
+/*#region ============================== TARIFS ============================== */
+
+#tarifs .cta-in-icon {
+    transform: rotate(15deg);
+}
+
+/*#endregion ============================== TARIFS ============================== */
 
 /*#region ============================== FOOTER ==============================*/
 
