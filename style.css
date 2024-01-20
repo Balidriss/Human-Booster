@@ -30,7 +30,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
 
 
     /* CTA */
-    --paddingCTAHeight: 0.8rem;
+    --paddingCTAHeight: 1rem;
     --marginIconCTA: 0.2rem;
     /* changer la proportionalité entre le padding en hauteur et largeur */
     --paddingCTARatio: 2.5;
@@ -544,7 +544,7 @@ h3 strong::after {
 
 form {
     margin: 1rem;
-    width: 30%;
+    width: 33%;
     margin: auto;
 }
 
@@ -683,10 +683,27 @@ td:last-child p {
 
 #section-contact ul:first-of-type li {
     color: var(--primaryColorLight);
+    margin: 0.5rem 0.5rem 0.5rem;
+    font-size: var(--primaryFontSize);
 }
 
+#section-contact ul {
+    margin: 2rem 0;
+}
+
+#section-contact ul:first-of-type {
+    margin: 0;
+}
+
+#section-contact .cta-container {
+    margin: 2rem 0;
+}
+
+
+
 #section-contact li {
-    margin: 0.5rem;
+    margin: 0.2rem;
+    font-size: 0.8rem;
 }
 
 .overlay-contact {
@@ -697,6 +714,10 @@ td:last-child p {
     right: 0;
 }
 
+.contact-details img {
+    align-self: flex-start;
+    margin: 0.3em 0.5em 0.3em;
+}
 
 /*#region ============================== FOOTER ==============================*/
 
