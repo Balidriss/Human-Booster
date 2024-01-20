@@ -313,7 +313,7 @@ nav .ticket-icon {
 
 /*#region ============================== CAROUSEL ==============================*/
 
-/* for clarity until carousel script*/
+/* en attendant le script */
 .block-carousel {
 
     display: flex;
@@ -345,7 +345,7 @@ nav .ticket-icon {
 
 /*#region ============================== PRESENTATION + STAND ==============================*/
 
-
+/* Si on le souhaite on peut changer l'ordre horizontalement*/
 section figure {
     display: flex;
     order: 3;
@@ -365,13 +365,15 @@ section .text-content p {
     line-height: 1.3em;
 }
 
-
+/* dans la section stand, premiere lettre du premier element <p> */
 #section-stand .text-content p:first-of-type::first-letter {
 
     font-size: var(--hOneFontSize);
     color: var(--primaryColor);
     vertical-align: top;
+    /*  Permet d'aligner le haut de la lettre */
     float: left;
+    /* Text s'adapte autour de la lettre  */
     font-weight: 600;
     margin-right: 0.1em;
 }
@@ -401,6 +403,7 @@ section .text-content p {
 
 }
 
+/* en modifiant juste une variable on a l'espacement qui reste proportionel */
 .stat-block {
     margin: calc(var(--spacingStatBlock)*3) var(--spacingStatBlock);
     padding-right: var(--spacingStatBlock);
@@ -412,6 +415,7 @@ section .text-content p {
     font-size: 0.75em;
 }
 
+/* un autre separateur mais avec l'utilisation des bordures */
 .stat-block:not(.stat-block:last-child) {
     border-right: dotted 1px var(--secondaryColorLight);
 }
@@ -444,6 +448,7 @@ h3 strong sup {
     text-transform: none;
 }
 
+/* saut de ligne aprés <strong> */
 h3 strong::after {
     content: "\a";
     white-space: pre;
