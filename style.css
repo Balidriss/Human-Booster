@@ -160,7 +160,9 @@ nav {
     color: var(--primaryColor)
 }
 
+/* ======= TODO : Regarder si l'inverse n'est pas mieu */
 
+/* deuxieme partie des titre h2 qui ont une police différente */
 h2 strong {
     font-family: var(--primaryFont);
     text-transform: none;
@@ -169,6 +171,7 @@ h2 strong {
     line-height: var(--lineHeightHTwo);
 }
 
+/* j'ajoute un retour à la ligne juste avant la second partie de h2 */
 h2 strong::before {
     content: "\a";
     white-space: pre;
@@ -183,7 +186,6 @@ nav {
 
 }
 
-/*La maquette ne présente aucune puce de liste, il est donc safe de généraliser*/
 ul {
     list-style: none;
 }
@@ -216,6 +218,8 @@ li {
     margin-right: 1em;
 }
 
+
+/* ======== TODO : ENLEVER FLEX === ajouter de l'espacement a la place */
 .text-content {
     padding: 0 3.5rem;
     order: 2;
@@ -228,7 +232,7 @@ li {
 
 /*#region ============================== HEADER ==============================*/
 
-/* Je fixe un fond coloré en haut de la page avec la même hauteur que la première ligne de navigation */
+/* Fixe un fond coloré en haut de la page avec la même hauteur que la première ligne de navigation */
 .gradient-bg {
     z-index: -1;
     position: absolute;
