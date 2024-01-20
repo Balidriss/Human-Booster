@@ -93,7 +93,8 @@ h2,
 nav,
 .learn-more,
 .cta,
-label[for="email"] {
+label[for="email"],
+td:last-child p {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
 }
@@ -589,7 +590,7 @@ label[for="email"] {
 }
 
 .text-container {
-    margin: 1rem 3.2rem;
+    margin: 1rem 1rem;
     margin-top: 2rem;
 }
 
@@ -604,13 +605,58 @@ label[for="email"] {
 
 }
 
-.tarifs-content figure {
+.table-and-content {
+    margin-left: 3rem;
+}
+
+figure {
     width: auto;
     height: max-content;
 }
 
 #section-tarifs article>figure {
     margin-top: 2rem;
+}
+
+table {
+    margin: 1rem;
+    border-collapse: collapse;
+}
+
+td {
+
+    padding: 2rem;
+    border-top: dotted 1px;
+    border-bottom: dotted 1px;
+}
+
+td:first-child {
+    border-right: dotted 1px;
+    padding: 0.6rem;
+}
+
+td p {
+    font-family: var(--primaryFont);
+    text-transform: none;
+    color: var(--secondaryColorDark);
+    font-size: 0.8rem;
+}
+
+td:first-child p:first-child {
+    font-size: 1rem;
+    color: var(--primaryColorDark);
+    font-weight: 600;
+}
+
+td:last-child p {
+    text-align: center;
+    font-weight: 500;
+    color: var(--primaryColor);
+    font-size: 1rem;
+}
+
+.tarifs-cta-container {
+    margin-top: 1rem;
 }
 
 /*#endregion ============================== TARIFS ============================== */
