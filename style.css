@@ -465,6 +465,23 @@ h3 strong::after {
 
 /*#endregion ============================== STATS ==============================*/
 
+/*#region ============================== BLOG ==============================*/
+
+/* TODO ======= Carousel */
+#section-blog .carousel {
+    overflow-x: hidden;
+}
+
+#section-blog article {
+    flex-direction: column;
+    margin: 0 1rem;
+
+}
+
+
+/*#endregion ============================== BLOG ==============================*/
+
+
 /*#region ============================== NEWSLETTER ==============================*/
 
 #section-newsletter .cta {
