@@ -169,6 +169,7 @@ h3 {
 
 
 .cta-in-icon {
+
     background-color: var(--bgLightOpacity);
     border-radius: 50%;
     align-items: center;
@@ -355,19 +356,22 @@ h1 {
 .cta-carousel {
     display: flex;
     flex-direction: row;
+    margin: 1.5rem 0;
 }
 
 .cta-carousel .cta {
     border: none;
+    margin-left: 0.7rem;
 }
 
 .cta-carousel .cta:first-of-type {
     border: solid var(--borderThicknessCTA) var(--primaryColorLight);
+    margin-left: 0;
 }
 
 .cta-carousel .cta-in-icon {
     background-color: var(--bgRedOpacity);
-
+    transform: rotate(15deg);
 }
 
 #section-carousel article {
