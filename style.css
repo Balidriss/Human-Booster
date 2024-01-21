@@ -112,7 +112,7 @@ nav,
 label[for="email"],
 td:last-child p,
 footer li,
-.carousel-text p:last-of-type {
+.carousel-text p {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
 }
@@ -240,9 +240,6 @@ li {
     font-weight: 300;
 }
 
-
-
-/* ======== TODO : ENLEVER FLEX === ajouter de l'espacement a la place */
 .text-content {
     margin: 0 3.5rem;
     order: 2;
@@ -363,7 +360,7 @@ h1 {
 .cta-carousel {
     display: flex;
     flex-direction: row;
-    margin: 1.5rem 0;
+    margin-top: 1.5rem;
 }
 
 .cta-carousel .cta {
@@ -396,6 +393,7 @@ h1 {
     z-index: 1;
 }
 
+/* tous les éléments dans le text de la section carousel sauf mes boutons CTA */
 #section-carousel .carousel-text *:not(.cta) {
     color: var(--primaryColorLight);
 }
@@ -405,13 +403,20 @@ h1 {
 }
 
 .carousel-text p:first-of-type {
-    font-weight: 500;
-    font-size: 0.85rem;
+    letter-spacing: 0.04rem;
+    font-size: 0.87rem;
     background-color: var(--bgDates);
     padding: 0.2rem 1.1rem;
     margin: 1rem 0;
     border-radius: 2rem;
     width: fit-content;
+}
+
+/* le > dans la date */
+#section-carousel span {
+    font-weight: 400;
+    font-size: larger;
+    vertical-align: middle;
 }
 
 .carousel-text p:last-of-type {
@@ -424,7 +429,7 @@ h1 {
 
 .carousel-text p:last-of-type img {
     vertical-align: middle;
-    margin-right: 1em;
+    margin: auto 0.8em;
 }
 
 #section-carousel .carousel img {
