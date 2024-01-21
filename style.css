@@ -22,6 +22,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     === FONT ===
     ==========*/
     --primaryFontSize: 1.125;
+    /* H1 et H2 */
     --hOneFontSize: 3.25rem;
     --hTwoFontSize: 0.8rem;
     /* deuxieme partie des titre h2 en plus gros */
@@ -29,8 +30,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /* hauteur sauter de ligne dans les titres h2 */
     --lineHeightHTwo: 1.1;
 
-
-    /* CTA */
+    /*=== CTA === */
     --paddingCTAHeight: 1rem;
     /* !! Ceci influence la distance entre le rond et la bordure des CTA qui ont une icone !! */
     --marginIconCTA: 0.2rem;
@@ -169,7 +169,7 @@ h3 {
 }
 
 
-.cta-in-icon {
+.icon-in-cta {
 
     background-color: var(--bgLightOpacity);
     border-radius: 50%;
@@ -374,7 +374,7 @@ h1 {
 
 }
 
-.cta-carousel .cta-in-icon {
+.cta-carousel .icon-in-cta {
     background-color: var(--bgRedOpacity);
     transform: rotate(15deg);
 }
@@ -658,7 +658,7 @@ label[for="email"] {
 
 /*#region ============================== TARIFS ============================== */
 
-#section-tarifs .cta-in-icon {
+#section-tarifs .icon-in-cta {
     transform: rotate(15deg);
 }
 
