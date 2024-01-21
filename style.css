@@ -708,6 +708,7 @@ form {
 form label {
     text-align: left;
     color: var(--primaryColorLight);
+    margin-left: 0.5rem;
 }
 
 .block-mail-submit {
