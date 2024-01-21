@@ -139,6 +139,7 @@ h3 {
 
 /* Je généralise le bouton cta */
 .cta {
+
     font-size: var(--fontSizeCTA);
     font-weight: var(--weightCTA);
     text-decoration: none;
@@ -352,6 +353,11 @@ nav .ticket-icon {
 
     display: flex;
 
+}
+
+.cta-carousel {
+    display: flex;
+    flex-direction: row;
 }
 
 #section-carousel article {
