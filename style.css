@@ -28,7 +28,10 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /* deuxieme partie des titre h2 en plus gros */
     --strongerTitlePart: 3em;
     /* hauteur sauter de ligne dans les titres h2 */
-    --lineHeightHTwo: 1.1;
+    --lineHeightHTwo: 1.1rem;
+
+    /* espacement entre les sections */
+    --marginSection: 4.3rem;
 
     /*=== CTA === */
     --paddingCTAHeight: 1rem;
@@ -118,7 +121,7 @@ footer li,
 }
 
 section {
-    margin: 4.3rem 0;
+    margin: var(--marginSection) 0;
 }
 
 
@@ -130,7 +133,7 @@ section article {
 
 
 article {
-    margin: 0rem 0;
+    margin: 0;
 }
 
 h2,
@@ -143,6 +146,7 @@ h2 {
     color: var(--primaryColor);
     letter-spacing: 0.04rem;
     font-weight: 500;
+    margin-bottom: 2rem;
 }
 
 
@@ -163,6 +167,15 @@ h2 strong {
 h2 strong::before {
     content: "\a";
     white-space: pre;
+
+}
+
+/* On compense l'espace supplémentaire crée par line-height h2 entre les sections */
+section h2:first-child {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+
 
 }
 
@@ -488,16 +501,6 @@ section .text-content p:last-of-type {
 }
 
 
-#section-stand {
-    margin-top: 2rem;
-}
-
-#section-stand h2 {
-    margin-bottom: 2rem;
-}
-
-
-
 #section-stand article {
     display: flex;
     flex-direction: column;
@@ -534,19 +537,9 @@ section .text-content p:last-of-type {
 }
 
 
-
-
-
-
-
-
 /*#endregion ============================== PRESENTATION + STAND ==============================*/
 
 /*#region ============================== STATS ==============================*/
-
-#section-stats {
-    margin-bottom: 1rem;
-}
 
 #section-stats article {
     background-image: url("assets/img/black_grape_bg.jpg");
