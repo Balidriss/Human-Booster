@@ -24,7 +24,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --primaryFontSize: 1.125;
     /* H1 et H2 */
     --hOneFontSize: 3.25rem;
-    --hTwoFontSize: 0.8rem;
+    --hTwoFontSize: 0.87rem;
     /* deuxieme partie des titre h2 en plus gros */
     --strongerTitlePart: 3em;
     /* hauteur sauter de ligne dans les titres h2 */
@@ -133,18 +133,61 @@ article {
     margin: 0rem 0;
 }
 
-
-
-h2 {
-    color: var(--primaryColor);
-}
-
 h2,
 h3 {
 
     font-size: var(--hTwoFontSize);
 }
 
+h2 {
+    color: var(--primaryColor);
+    letter-spacing: 0.04rem;
+    font-weight: 500;
+}
+
+
+/* ======= TODO : Regarder si l'inverse n'est pas mieu */
+
+/* deuxieme partie des titre h2 qui ont une police différente */
+h2 strong {
+    color: var(--secondaryColorDark);
+    font-family: var(--primaryFont);
+    text-transform: none;
+    font-size: var(--strongerTitlePart);
+    font-weight: 400;
+    line-height: var(--lineHeightHTwo);
+    letter-spacing: normal;
+}
+
+/* j'ajoute un retour à la ligne juste avant la second partie de h2 */
+h2 strong::before {
+    content: "\a";
+    white-space: pre;
+
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+
+/*  Une liste qui aura cette class ajoutera un I à gauche sur chaque li avec les espacements spécifiés sauf pour le premier. On peut remplacer I par "|"  et ajouter plus de style dessu
+ mais la police donne le résultat attendu de la maquette */
+.separator>li:not(li:first-child)::before {
+    content: "I";
+    color: #00000033;
+    margin: auto 1.2rem;
+    font-weight: 300;
+}
+
+.text-content {
+    margin: 0 2.9rem;
+}
 
 /*#region ====CTA==== */
 
@@ -202,47 +245,8 @@ h3 {
 /*#endregion ====CTA==== */
 
 
-/* ======= TODO : Regarder si l'inverse n'est pas mieu */
-
-/* deuxieme partie des titre h2 qui ont une police différente */
-h2 strong {
-    color: var(--secondaryColorDark);
-    font-family: var(--primaryFont);
-    text-transform: none;
-    font-size: var(--strongerTitlePart);
-    font-weight: 400;
-    line-height: var(--lineHeightHTwo);
-}
-
-/* j'ajoute un retour à la ligne juste avant la second partie de h2 */
-h2 strong::before {
-    content: "\a";
-    white-space: pre;
-
-}
-
-ul {
-    list-style: none;
-}
-
-li {
-    display: flex;
-    align-items: center;
-}
 
 
-/*  Une liste qui aura cette class ajoutera un I à gauche sur chaque li avec les espacements spécifiés sauf pour le premier. On peut remplacer I par "|"  et ajouter plus de style dessu
- mais la police donne le résultat attendu de la maquette */
-.separator>li:not(li:first-child)::before {
-    content: "I";
-    color: #00000033;
-    margin: auto 1.2rem;
-    font-weight: 300;
-}
-
-.text-content {
-    margin: 0 3.5rem;
-}
 
 /*#endregion ============================== GENERAL ==============================*/
 
@@ -461,14 +465,28 @@ section figure {
 }
 
 
-section .text-content p:last-of-type {
-    color: var(--secondaryColorDark);
-    font-size: 0.75em;
-    line-height: 2;
+section .text-content p {
+    line-height: 1.6rem;
+    margin-right: 3rem;
+    margin-top: 0rem;
+
 }
 
-section .text-content p {
-    line-height: 1.3em;
+section .text-content p:last-of-type {
+    color: var(--secondaryColorDark);
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+#section-presentation .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: var(--paddingCTAHeight);
+}
+
+#section-presentation h2 {
+    margin: 1rem 0;
 }
 
 #section-stand article {
@@ -492,6 +510,8 @@ section .text-content p {
     font-weight: 600;
     margin-right: 0.1em;
 }
+
+
 
 
 
