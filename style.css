@@ -22,14 +22,14 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /* =========
     === FONT ===
     ==========*/
-    --primaryFontSize: 1.125;
+    --primaryFontSize: 1.125rem;
     /* H1 et H2 */
     --hOneFontSize: 3.25rem;
-    --hTwoFontSize: 0.87rem;
+    --hTwoFontSize: 0.875rem;
     /* deuxieme partie des titre h2 en plus gros */
-    --strongerTitlePart: 3em;
+    --strongerTitlePart: 2.6rem;
     /* hauteur sauter de ligne dans les titres h2 */
-    --lineHeightHTwo: 1.1rem;
+    --lineHeightHTwo: 1rem;
 
     /* espacement entre les sections */
     --marginSection: 4.3rem;
@@ -43,7 +43,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --paddingCTA: var(--paddingCTAHeight) calc(var(--paddingCTARatio) * var(--paddingCTAHeight));
     --paddingIconCTA: calc(var(--paddingCTAHeight) - var(--marginIconCTA));
     --weightCTA: 700;
-    --fontSizeCTA: 0.7rem;
+    --fontSizeCTA: 0.75rem;
     --borderRadiusCTA: calc(var(--paddingCTAHeight)*2);
     /* influence les CTA qui ont une bordure */
     --borderThicknessCTA: 0.1rem;
@@ -59,7 +59,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --marginMenuSalonLi: var(--menuSpacing);
 
     /*change l'espacement dans la parti section stat*/
-    --spacingStatBlock: 1rem;
+    --spacingStatBlock: 0.7rem;
 
     /* footer */
     --heightFooter: 3rem;
@@ -80,7 +80,6 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /*  */
     color: var(--primaryColorDark);
     font-family: var(--primaryFont);
-    font-size: var(--primaryFontSize);
 }
 
 /* espacement marge du site*/
@@ -100,10 +99,10 @@ h4,
 h5,
 h6 {
 
-    font-size: 2em;
+    font-size: 2rem;
     margin: 0;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 /* Applique le style particulier sur les elements qui en ont besoins */
@@ -206,7 +205,7 @@ figure img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 2.9rem;
+    margin: 0 2rem;
 }
 
 .carousel {
@@ -321,11 +320,15 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    height: var(--heightMenuAbout);
+
+}
+
+.about-nav li {
     font-size: 0.625rem;
     font-weight: 500;
     letter-spacing: 0.04rem;
-    height: var(--heightMenuAbout);
-
 }
 
 /* <ul> class contenant les logos facebook et insta */
@@ -341,15 +344,16 @@ nav ul {
 
 .salon-nav {
 
-    font-size: 0.8rem;
-    font-weight: 600;
+
     justify-content: end;
-    letter-spacing: 0.03rem;
+
 }
 
 
 .salon-nav li {
-
+    letter-spacing: 0.03rem;
+    font-size: 0.75rem;
+    font-weight: 600;
     margin: calc(var(--menuSpacing)/2) 0;
     margin-left: var(--marginMenuSalonLi);
 
@@ -488,9 +492,10 @@ h1 {
 
 
 section .text-content p {
+    font-size: var(--primaryFontSize);
     line-height: 1.6rem;
-    margin-right: 3rem;
-    margin-top: 0rem;
+    padding-right: 5rem;
+
 
 }
 
@@ -534,7 +539,12 @@ section .text-content p:last-of-type {
     line-height: 1.625rem;
     font-size: var(--primaryFontSize);
     margin-bottom: 0.5rem;
+    padding-right: 5.5rem;
 
+}
+
+#section-stand .text-content p:last-of-type {
+    padding-right: 5rem;
 }
 
 /* dans la section stand, premiere lettre du premier element <p> */
@@ -547,6 +557,7 @@ section .text-content p:last-of-type {
     font-weight: 600;
     margin-right: 0.4rem;
     margin-bottom: 0.1rem;
+    line-height: 1.625rem;
 }
 
 
@@ -560,15 +571,15 @@ section .text-content p:last-of-type {
     background-blend-mode: darken;
     display: flex;
     color: var(--primaryColorLight);
-    padding: 1rem 0;
-    ;
+    padding: 1.7rem 0.5rem;
 
 }
 
 /* en modifiant juste une variable on a l'espacement qui reste proportionel */
 .stat-block {
-    margin: calc(var(--spacingStatBlock)*3) var(--spacingStatBlock);
+    margin: calc(var(--spacingStatBlock)*4) var(--spacingStatBlock);
     padding-right: var(--spacingStatBlock);
+    padding-left: var(--spacingStatBlock);
 
 }
 
@@ -588,6 +599,7 @@ section .text-content p:last-of-type {
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: var(--spacingStatBlock);
+    letter-spacing: 0.04rem;
 
 }
 
@@ -600,7 +612,8 @@ section .text-content p:last-of-type {
 h3 strong {
 
     color: var(--primaryColor);
-    font-size: var(--hOneFontSize);
+    font-size: 3.85rem;
+    line-height: 3.85rem;
     font-weight: inherit;
     margin: 0.2rem;
 }
@@ -714,8 +727,8 @@ form label {
 .block-mail-submit {
     display: flex;
     justify-content: center;
-    margin: 0.5rem;
-
+    margin: 0.2rem;
+    margin-bottom: 0.7rem;
 }
 
 #section-newsletter .cta {
@@ -775,19 +788,26 @@ label[for="email"] {
 
 /*#region ============================== TARIFS ============================== */
 
+#section-tarifs h2 {
+    margin-bottom: 1.75rem;
+}
+
 #section-tarifs .icon-in-cta {
     transform: rotate(15deg);
 }
 
 .text-container {
-    margin: 1rem 1rem;
+    margin: 0 1rem;
     margin-top: 2rem;
+    padding-top: 1.25rem;
 }
 
 
 .text-container p {
-    margin: 1rem 3rem;
+    padding: 1rem 3.5rem;
+    padding-left: 0;
     margin-left: 0;
+    font-size: var(--primaryFontSize);
 }
 
 .tarifs-content {
@@ -822,7 +842,7 @@ td {
 
 td:first-child {
     border-right: dotted 1px;
-    padding: 0.6rem;
+    padding: 1.25rem;
 }
 
 td p {
@@ -864,6 +884,15 @@ td:last-child p {
 
 }
 
+#section-contact h2 {
+    margin: 0;
+
+}
+
+#section-contact .wavy-separator {
+    margin-top: 0.75rem;
+    text-align: left;
+}
 
 
 #section-contact li strong,
@@ -894,14 +923,20 @@ td:last-child p {
 
 #section-contact li {
     margin: 0.2rem;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 }
 
+#section-contact ul:first-of-type {
+    line-height: 1.5rem;
+}
+
+
 .overlay-contact {
-    padding: 1.5rem 3rem;
+    padding: 2rem 3rem;
     background-color: var(--primaryColorDark);
     position: absolute;
-    bottom: -1rem;
+    bottom: -2.2rem;
     right: 0;
 }
 
@@ -934,8 +969,10 @@ footer ul {
 footer li {
 
     color: var(--primaryColorLight);
-    font-size: 0.7rem;
-    font-weight: 500;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+    line-height: 0.75rem;
 }
 
 .block-footer p {
@@ -951,6 +988,12 @@ footer li {
     align-items: center;
 }
 
+/* On oblige les separateur du footeur d'appliquer cette couleur */
+footer .separator li::before {
+    color: var(--secondaryColorLight) !important;
+
+}
+
 .footer-bg {
     z-index: -1;
     position: absolute;
@@ -960,5 +1003,7 @@ footer li {
     height: var(--heightFooter);
     background: var(--primaryColor);
 }
+
+
 
 /*#endregion ============================== FOOTER ==============================*/
