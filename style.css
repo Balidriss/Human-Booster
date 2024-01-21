@@ -227,7 +227,7 @@ figure img {
     padding: var(--paddingCTA);
     border: none;
     border-radius: var(--borderRadiusCTA);
-    letter-spacing: 0.04;
+    letter-spacing: 0.04rem;
 }
 
 /* ==== Je personalise le bouton cta ==== */
@@ -668,53 +668,60 @@ h3 strong::after {
     background-blend-mode: darken;
     display: flex;
     flex-direction: column;
+    padding: 2.6rem 0;
 
 }
 
 .block-mail-submit,
-#section-newsletter h2 {
+#section-newsletter h2,
+.wavy-separator {
     text-align: center;
+
+}
+
+#section-newsletter h2 {
+    font-size: 0.875rem;
+    letter-spacing: 0.045rem;
+    font-weight: 400;
+    color: var(--secondaryColorLight);
+    margin: 0;
 }
 
 
-#section-newsletter h2,
+
 #section-newsletter h2 strong {
 
     color: var(--primaryColorLight);
 }
 
-
-#section-newsletter .cta {
-    border-radius: 0;
-
+.wavy-separator {
+    margin: 1rem auto;
 }
 
 form {
-    margin: 1rem;
+
     width: 33%;
     margin: auto;
 }
 
+
 form label {
     text-align: left;
     color: var(--primaryColorLight);
-    margin-left: 1rem;
 }
 
-.consent-block {
-    margin: 0 1rem;
+.block-mail-submit {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+
 }
 
-[for="consent"] {
-    font-weight: 400;
-    font-size: 0.75em;
-    color: var(--secondaryColorLight);
-}
+#section-newsletter .cta {
+    padding: 0.85rem 2rem;
+    overflow: auto;
+    border-radius: 0;
 
-label[for="email"] {
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    font-size: 0.75rem;
 }
 
 #section-newsletter [name=email] {
@@ -726,6 +733,41 @@ label[for="email"] {
     border-bottom-right-radius: var(--borderRadiusCTA);
     border-top-right-radius: var(--borderRadiusCTA);
 }
+
+label[for="email"] {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+}
+
+[placeholder] {
+    color: var(--darken);
+    font-family: var(--primaryFont);
+    font-size: 0.87rem;
+    font-weight: 400;
+    text-transform: none;
+}
+
+
+#consent {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+
+}
+
+
+[for="consent"] {
+    font-weight: 400;
+    font-size: 0.75em;
+    color: var(--secondaryColorLight);
+    line-height: 1rem;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+
+
 
 /*#endregion ============================== NEWSLETTER ==============================*/
 
