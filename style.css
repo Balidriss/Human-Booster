@@ -11,8 +11,9 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --secondaryColorLight: #B2B3B3;
     --bgDates: rgb(255, 255, 255, 0.2);
     --bgNavGradientColor: linear-gradient(to left, rgba(25, 24, 25, 0.08) 0%, rgba(25, 24, 25, 0.01) 95.63%, rgba(25, 24, 25, 0.00) 100%);
-    --bgStatsDarken: #000A;
-
+    --darken: #000A;
+    --lightOpacity: #ffffff33;
+    --redOpacity: #7E162533;
 
     /* Font family */
     --primaryFont: 'Poppins', sans-serif;
@@ -47,8 +48,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /* influence les CTA qui ont une bordure */
     --borderThicknessCTA: 0.1rem;
 
-    --bgLightOpacity: #ffffff33;
-    --bgRedOpacity: #7E162533;
+
 
 
 
@@ -236,7 +236,7 @@ li {
 /* balise div contenant l'icon, permet de créer le fond rond sans avoir l'icone hérité de la bordure ronde */
 .icon-in-cta {
 
-    background-color: var(--bgLightOpacity);
+    background-color: var(--lightOpacity);
     border-radius: 50%;
     align-items: center;
     display: flex;
@@ -394,7 +394,7 @@ h1 {
 }
 
 .cta-carousel .icon-in-cta {
-    background-color: var(--bgRedOpacity);
+    background-color: var(--redOpacity);
     transform: rotate(15deg);
 }
 
@@ -547,10 +547,12 @@ section .text-content p:last-of-type {
 
 #section-stats article {
     background-image: url("assets/img/black_grape_bg.jpg");
-    background-color: var(--bgStatsDarken);
+    background-color: var(--darken);
     background-blend-mode: darken;
     display: flex;
     color: var(--primaryColorLight);
+    padding: 1rem 0;
+    ;
 
 }
 
@@ -563,7 +565,8 @@ section .text-content p:last-of-type {
 
 .stat-block p:last-of-type {
 
-    font-size: 0.75em;
+    font-size: 0.8em;
+    color: #ffffffcc;
 }
 
 /* un autre separateur mais avec l'utilisation des bordures */
@@ -647,7 +650,7 @@ h3 strong::after {
 /*#region ============================== NEWSLETTER ==============================*/
 #section-newsletter {
     background-image: url("assets/img/white_grape_bg.jpg");
-    background-color: var(--bgStatsDarken);
+    background-color: var(--darken);
     background-blend-mode: darken;
     display: flex;
     flex-direction: column;
