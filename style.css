@@ -55,7 +55,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /* font du header même taille que le menu  */
     --heightMenuAbout: 2.3rem;
     /* menu 2nd ligne*/
-    --menuSpacing: 1.9rem;
+    --menuSpacing: 3rem;
     --marginMenuSalonLi: var(--menuSpacing);
 
     /*change l'espacement dans la parti section stat*/
@@ -351,11 +351,20 @@ nav ul {
 
 
 .salon-nav li {
+    letter-spacing: 0.0375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: calc(var(--menuSpacing)/4) 0;
+    margin-left: var(--marginMenuSalonLi);
+
+}
+
+.salon-nav li span {
     letter-spacing: 0.03rem;
     font-size: 0.75rem;
     font-weight: 600;
-    margin: calc(var(--menuSpacing)/2) 0;
-    margin-left: var(--marginMenuSalonLi);
+    color: var(--primaryColor);
+    margin-left: calc(var(--marginMenuSalonLi)/4);
 
 }
 
