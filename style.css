@@ -508,18 +508,23 @@ section .text-content p:last-of-type {
 
 .contenu-section-stand {
     display: flex;
-    margin: 1rem 0;
+    margin: 1.2rem 0;
 }
 
 #section-stand .text-content {
     justify-content: flex-start;
-    gap: 2rem;
+
+}
+
+#section-stand .text-content>* {
+    margin-bottom: 2rem;
+
 }
 
 #section-stand .text-content p:first-of-type {
-    line-height: 1.6rem;
-    font-size: 1.2rem;
-
+    line-height: 1.625rem;
+    font-size: var(--primaryFontSize);
+    margin-bottom: 0.5rem;
 
 }
 
@@ -528,12 +533,11 @@ section .text-content p:last-of-type {
 
     font-size: 3.87rem;
     color: var(--primaryColor);
-    vertical-align: top;
-    /*  Permet d'aligner le haut de la lettre */
-    float: left;
     /* Text s'adapte autour de la lettre  */
+    float: left;
     font-weight: 600;
-    margin-right: 0.1em;
+    margin-right: 0.4rem;
+    margin-bottom: 0.1rem;
 }
 
 
