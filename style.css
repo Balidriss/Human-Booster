@@ -106,7 +106,8 @@ nav,
 .cta,
 label[for="email"],
 td:last-child p,
-footer li {
+footer li,
+.carousel-text p:last-of-type {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
 }
@@ -348,6 +349,7 @@ h1 {
     font-weight: 500;
     text-transform: none;
     line-height: 3.875rem;
+    margin: 0.5rem 0.2rem;
 }
 
 .cta-carousel {
@@ -356,7 +358,8 @@ h1 {
 }
 
 #section-carousel article {
-
+    display: flex;
+    align-items: center;
     position: relative;
     overflow: hidden;
     padding: 0;
@@ -365,7 +368,8 @@ h1 {
 
 #section-carousel .carousel-text {
 
-    margin: 5rem;
+
+    margin-left: 5rem;
     position: absolute;
     z-index: 1;
     padding: 10px;
@@ -384,11 +388,25 @@ h1 {
 
 .carousel-text p:first-of-type {
     font-weight: 500;
-
+    font-size: 0.85rem;
     background-color: var(--bgDates);
     padding: 0.2rem 1.1rem;
+    margin: 1rem 0;
     border-radius: 2rem;
     width: fit-content;
+}
+
+.carousel-text p:last-of-type {
+    font-size: 0.6rem;
+    padding: 0.5rem;
+    width: fit-content;
+    border-top: dotted 1px var(--primaryColorLight);
+
+}
+
+.carousel-text p:last-of-type img {
+    vertical-align: middle;
+    margin-right: 1em;
 }
 
 #section-carousel .carousel img {
