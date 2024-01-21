@@ -242,7 +242,6 @@ li {
 
 .text-content {
     margin: 0 3.5rem;
-    order: 2;
 }
 
 /*#endregion ============================== GENERAL ==============================*/
@@ -458,12 +457,9 @@ h1 {
 /* Si on le souhaite on peut changer l'ordre horizontalement*/
 section figure {
     display: flex;
-    order: 3;
+
 }
 
-section figure:first-child {
-    order: 0;
-}
 
 section .text-content p:last-of-type {
     color: var(--secondaryColorDark);
@@ -473,6 +469,15 @@ section .text-content p:last-of-type {
 
 section .text-content p {
     line-height: 1.3em;
+}
+
+#section-stand article {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenu-section-stand {
+    display: flex;
 }
 
 /* dans la section stand, premiere lettre du premier element <p> */
