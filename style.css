@@ -357,6 +357,19 @@ h1 {
     flex-direction: row;
 }
 
+.cta-carousel .cta {
+    border: none;
+}
+
+.cta-carousel .cta:first-of-type {
+    border: solid var(--borderThicknessCTA) var(--primaryColorLight);
+}
+
+.cta-carousel .cta-in-icon {
+    background-color: var(--bgRedOpacity);
+
+}
+
 #section-carousel article {
     display: flex;
     align-items: center;
