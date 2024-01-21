@@ -38,7 +38,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --paddingCTARatio: 2.5;
     --paddingCTA: var(--paddingCTAHeight) calc(var(--paddingCTARatio) * var(--paddingCTAHeight));
     --paddingIconCTA: calc(var(--paddingCTAHeight) - var(--marginIconCTA));
-    --weightCTA: 600;
+    --weightCTA: 700;
     --fontSizeCTA: 0.7rem;
     --borderRadiusCTA: calc(var(--paddingCTAHeight)*2);
     /* influence les CTA qui ont une bordure */
@@ -121,6 +121,7 @@ section {
 
 
 
+
 section article {
     display: flex;
 }
@@ -152,6 +153,7 @@ h3 {
     padding: var(--paddingCTA);
     border: none;
     border-radius: var(--borderRadiusCTA);
+    letter-spacing: 0.04;
 }
 
 /* Je personalise le bouton cta */
@@ -296,12 +298,12 @@ nav li:last-child {
     align-items: center;
     font-size: 0.625rem;
     font-weight: 500;
-    letter-spacing: 0.03;
+    letter-spacing: 0.04rem;
     height: var(--heightMenuAbout);
 
 }
 
-/* List class contenant les logos facebook et insta */
+/* <li> class contenant les logos facebook et insta */
 .socials {
 
     margin-left: 1rem;
@@ -316,7 +318,7 @@ nav li:last-child {
     font-size: 0.8rem;
     font-weight: 600;
     justify-content: end;
-    letter-spacing: 0.03rem
+    letter-spacing: 0.03rem;
 }
 
 
@@ -342,7 +344,9 @@ nav .ticket-icon {
 /*#region ============================== CAROUSEL ==============================*/
 
 
-
+#section-carousel {
+    margin-top: 0.5rem;
+}
 
 h1 {
     font-size: var(--hOneFontSize);
@@ -367,6 +371,7 @@ h1 {
 .cta-carousel .cta:first-of-type {
     border: solid var(--borderThicknessCTA) var(--primaryColorLight);
     margin-left: 0;
+
 }
 
 .cta-carousel .cta-in-icon {
