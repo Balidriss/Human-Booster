@@ -361,6 +361,7 @@ nav .ticket-icon {
 }
 
 #section-carousel article {
+
     position: relative;
     overflow: hidden;
     padding: 0;
@@ -369,17 +370,26 @@ nav .ticket-icon {
 
 #section-carousel .carousel-text {
 
+    margin: 5rem;
     position: absolute;
     z-index: 1;
     padding: 10px;
 
 }
 
+#section-carousel .carousel-text *:not(.cta) {
+    color: var(--primaryColorLight);
 
-#section-carousel .carousel-text * {
 
-    position: relative;
 }
+
+.carousel-text p:first-of-type {
+    background-color: var(--secondaryColorLight);
+    padding: 0.5rem;
+    border-radius: 2rem;
+    width: fit-content;
+}
+
 
 /*#endregion ============================== CAROUSEL ==============================*/
 
