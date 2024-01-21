@@ -339,20 +339,7 @@ nav .ticket-icon {
 
 /*#region ============================== CAROUSEL ==============================*/
 
-/* en attendant le script */
-.block-carousel {
 
-
-    z-index: -2;
-}
-
-.carousel {
-
-    display: flex;
-
-}
-
-/*  */
 
 
 h1 {
@@ -404,6 +391,24 @@ h1 {
     width: fit-content;
 }
 
+#section-carousel .carousel img {
+    filter: brightness(0.6);
+}
+
+/* en attendant le script */
+.block-carousel {
+
+
+    z-index: -2;
+}
+
+.carousel {
+
+    display: flex;
+
+}
+
+/*  */
 
 /*#endregion ============================== CAROUSEL ==============================*/
 
