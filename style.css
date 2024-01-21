@@ -209,6 +209,11 @@ figure img {
     margin: 0 2.9rem;
 }
 
+.carousel {
+    overflow-x: hidden;
+}
+
+
 /*#region ====CTA==== */
 
 /* les cta sont des tag <a> a part excepté celui de la newsletter qui est un input*/
@@ -406,7 +411,7 @@ h1 {
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
+
 }
 
 
@@ -621,14 +626,19 @@ h3 strong::after {
 
 
 
-#section-blog .carousel {
-    overflow-x: hidden;
-}
+
 
 #section-blog article {
     flex-direction: column;
-    margin: 0 1rem;
+    margin: 2rem 1rem;
 
+}
+
+#section-blog article p {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    margin: 1rem auto;
 }
 
 #section-blog .cta-container {
@@ -799,7 +809,7 @@ td:last-child p {
 /*#endregion ============================== TARIFS ============================== */
 
 /*#region ============================== CONTACT ============================== */
-/*#endregion ============================== CONTACT ============================== */
+
 #section-contact article {
     color: var(--primaryColorLight);
     position: relative;
@@ -864,6 +874,7 @@ td:last-child p {
 
 }
 
+/*#endregion ============================== CONTACT ============================== */
 /*#region ============================== FOOTER ==============================*/
 
 footer {
