@@ -188,6 +188,10 @@ li {
     align-items: center;
 }
 
+/* on enleve l'espace du tag figure */
+figure img {
+    vertical-align: top
+}
 
 /*  Une liste qui aura cette class ajoutera un I à gauche sur chaque li avec les espacements spécifiés sauf pour le premier. On peut remplacer I par "|"  et ajouter plus de style dessu
  mais la police donne le résultat attendu de la maquette */
@@ -508,7 +512,7 @@ section .text-content p:last-of-type {
 
 .contenu-section-stand {
     display: flex;
-    margin: 1.2rem 0;
+    margin-top: 1.2rem;
 }
 
 #section-stand .text-content {
