@@ -32,6 +32,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
 
     /* CTA */
     --paddingCTAHeight: 1rem;
+    /* !! Ceci influence la distance entre le rond et la bordure des CTA qui ont une icone !! */
     --marginIconCTA: 0.2rem;
     /* changer la proportionalité entre le padding en hauteur et largeur */
     --paddingCTARatio: 2.5;
@@ -39,8 +40,10 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --paddingIconCTA: calc(var(--paddingCTAHeight) - var(--marginIconCTA));
     --weightCTA: 600;
     --fontSizeCTA: 0.7rem;
-    --borderThicknessCTA: 0.1rem;
     --borderRadiusCTA: calc(var(--paddingCTAHeight)*2);
+    /* influence les CTA qui ont une bordure */
+    --borderThicknessCTA: 0.1rem;
+
     --bgLightOpacity: #ffffff33;
     --bgRedOpacity: #7E162533;
 
@@ -50,10 +53,10 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --mainWidthContainer: 1241px;
 
     /* font du header même taille que le menu  */
-    --heightMenuAbout: 2rem;
+    --heightMenuAbout: 2.3rem;
     /* menu 2nd ligne*/
-    --menuSpacing: 2rem;
-    --paddingMenuSalonLi: calc(var(--menuSpacing)/2) var(--menuSpacing);
+    --menuSpacing: 1.9rem;
+    --marginMenuSalonLi: calc(var(--menuSpacing)/2) var(--menuSpacing);
 
     /*change l'espacement dans la parti section stat*/
     --spacingStatBlock: 1rem;
@@ -98,7 +101,7 @@ h6 {
     font-size: 1em;
 }
 
-
+/* Applique le style particulier sur les elements qui en ont besoins */
 h1,
 h2,
 nav,
@@ -113,14 +116,10 @@ footer li,
 }
 
 section {
-    padding: 1rem 0;
+    margin: 4.3rem 0;
 }
 
-/* premiere section de la page */
-section:first-child {
-    padding-top: 0;
 
-}
 
 section article {
     display: flex;
@@ -128,7 +127,7 @@ section article {
 
 
 article {
-    padding: 1rem 0;
+    margin: 0rem 0;
 }
 
 
@@ -238,8 +237,8 @@ li {
  mais la police donne le résultat attendu de la maquette */
 .separator>li:not(li:first-child)::before {
     content: "I";
-    margin-left: 1rem;
-    margin-right: 1rem;
+    color: #00000033;
+    margin: auto 1.2rem;
     font-weight: 300;
 }
 
@@ -247,7 +246,7 @@ li {
 
 /* ======== TODO : ENLEVER FLEX === ajouter de l'espacement a la place */
 .text-content {
-    padding: 0 3.5rem;
+    margin: 0 3.5rem;
     order: 2;
     display: flex;
     flex-direction: column;
@@ -280,7 +279,7 @@ nav ul {
 
 /* J'alligne le menu avec la marge à droite */
 nav li:last-child {
-    padding-right: 0;
+    margin-right: 0;
 }
 
 /* ne fonctionne que si .logo-nav est un enfant d'un block en display flex */
@@ -295,8 +294,9 @@ nav li:last-child {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 0.5rem;
+    font-size: 0.625rem;
     font-weight: 500;
+    letter-spacing: 0.03;
     height: var(--heightMenuAbout);
 
 }
@@ -308,7 +308,7 @@ nav li:last-child {
 }
 
 .socials li {
-    padding-left: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 .salon-nav {
@@ -316,13 +316,13 @@ nav li:last-child {
     font-size: 0.8rem;
     font-weight: 600;
     justify-content: end;
-
+    letter-spacing: 0.03rem
 }
 
 
 .salon-nav li {
 
-    padding: var(--paddingMenuSalonLi);
+    margin: var(--marginMenuSalonLi);
 }
 
 /* Le lien Billetterie en rouge */
@@ -332,7 +332,7 @@ nav li:last-child {
 }
 
 nav .ticket-icon {
-    padding: 0 0.5em;
+    margin: 0 0.5em;
 
 }
 
@@ -379,24 +379,17 @@ h1 {
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding: 0;
 }
 
 
 #section-carousel .carousel-text {
-
-
     margin-left: 5rem;
     position: absolute;
     z-index: 1;
-    padding: 10px;
-
 }
 
 #section-carousel .carousel-text *:not(.cta) {
     color: var(--primaryColorLight);
-
-
 }
 
 .carousel-text p {
@@ -535,7 +528,7 @@ h3 strong {
     color: var(--primaryColor);
     font-size: var(--hOneFontSize);
     font-weight: inherit;
-    padding: 0.2rem;
+    margin: 0.2rem;
 }
 
 h3 strong sup {
@@ -626,11 +619,11 @@ form {
 form label {
     text-align: left;
     color: var(--primaryColorLight);
-    padding-left: 1rem;
+    margin-left: 1rem;
 }
 
 .consent-block {
-    padding: 0 1rem;
+    margin: 0 1rem;
 }
 
 [for="consent"] {
