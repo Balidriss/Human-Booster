@@ -219,10 +219,44 @@ figure img {
     margin: 0 2rem;
 }
 
-.carousel {
-    overflow-x: hidden;
+/* en attendant le script */
+.block-carousel {
+
+    order: 2;
+    display: flex;
+    z-index: -2;
 }
 
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+    padding: 1rem;
+
+}
+
+/*  */
+
+.slider-button {
+    background-color: var(--primaryColor);
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    padding: var(--paddingIconCTA);
+    margin: var(--marginIconCTA);
+    margin-right: 1rem;
+    color: var(--primaryColorLight);
+
+}
+
+.slider-button-left {
+    order: 1;
+
+}
+
+.slider-button-right {
+    order: 3;
+}
 
 /*#region ====CTA==== */
 
@@ -490,20 +524,7 @@ h1 {
     filter: brightness(0.6);
 }
 
-/* en attendant le script */
-.block-carousel {
 
-
-    z-index: -2;
-}
-
-.carousel {
-
-    display: flex;
-
-}
-
-/*  */
 
 /*#endregion ============================== CAROUSEL ==============================*/
 
