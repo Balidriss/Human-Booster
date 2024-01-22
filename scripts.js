@@ -40,7 +40,7 @@ function getNumberOfElementDisplayed(container) {
 function moveSlide(index, container, widthPercentElement) {
 
     console.log("movement", widthPercentElement);
-    container.querySelector('.block-carousel').style.transform = 'translateX(' + widthPercentElement * index + '%)';
+    container.querySelector('.block-carousel').style.transform = 'translateX(' + widthPercentElement * -index + '%)';
 
 }
 
