@@ -18,7 +18,7 @@ function slideToRight(currentIndex, directionIsRight, nmbElements, nmbDisplayedE
         }
     } else {
         // on stop de count quand il y a déja les premiers élements affichés
-        if (currentIndex > nmbDisplayedElements) {
+        if (currentIndex > nmbDisplayedElements - 1) {
             currentIndex--;
 
         }
@@ -34,8 +34,8 @@ function getNumberOfElementDisplayed(container) {
     const containerSize = container.offsetWidth;
     const blockContainer = container.firstElementChild;
     const elementSize = blockContainer.firstElementChild.offsetWidth;
-    console.log("fonction get number to display", containerSize, elementSize)
-    return nmbElementDisplayed = containerSize / elementSize;
+    console.log("fonction get number to display", containerSize, elementSize, containerSize / elementSize)
+    return Math.trunc(nmbElementDisplayed = containerSize / elementSize);
 }
 function moveSlide(index, container, widthPercentElement) {
 
