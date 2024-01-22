@@ -240,22 +240,20 @@ figure img {
 .slider-button {
     background-color: var(--primaryColor);
     border-radius: 50%;
-    align-items: center;
-    display: flex;
-    padding: var(--paddingIconCTA);
+    padding: 1rem;
     margin: var(--marginIconCTA);
-    margin-right: 1rem;
     color: var(--primaryColorLight);
+    position: absolute;
+    top: 50%;
 
 }
 
 .slider-button-left {
-    order: 1;
-
+    left: 2rem;
 }
 
 .slider-button-right {
-    order: 3;
+    right: 2rem;
 }
 
 /*#region ====CTA==== */
