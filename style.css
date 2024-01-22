@@ -240,12 +240,12 @@ figure img {
 .slider-button {
     background-color: var(--primaryColor);
     border-radius: 50%;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     margin: var(--marginIconCTA);
     color: var(--primaryColorLight);
     position: absolute;
     top: 50%;
-
+    cursor: pointer;
 }
 
 .slider-button-left {
