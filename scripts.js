@@ -5,28 +5,28 @@
 // !! Prendre la distance de l'élément et l'utiliser lors du mouvement du slider.
 
 // index va nous permettre d'incrémenter et connaitre la position du slider et sera sujet à des conditions.
-let currentIndex = 0;
+// besoin de dissocier cette variable index des différents carousels
+let index = 0;
 
-
-
-
-
-console.log(currentIndex);
-function slideToRight(directionIsRight, nmbElements, nmbDisplayedElements) {
+function slideToRight(currentIndex, directionIsRight, nmbElements, nmbDisplayedElements, container) {
     console.log("currentIndex :", currentIndex);
     if (directionIsRight) {
         // on stop de count quand il y a déja les derniers élements affichés 
         if (currentIndex < nmbElements - nmbDisplayedElements) {
             currentIndex++;
+
         }
     } else {
         // on stop de count quand il y a déja les premiers élements affichés
         if (currentIndex > nmbDisplayedElements) {
             currentIndex--;
+
         }
     }
+    moveSlide(currentIndex, container, 100 / nmbDisplayedElements);
     console.log("currentIndex :", currentIndex);
-    moveSlide();
+    return currentIndex;
+
 }
 
 // j'assume que les éléments ont tous la même taille
@@ -37,7 +37,14 @@ function getNumberOfElementDisplayed(container) {
     console.log("fonction get number to display", containerSize, elementSize)
     return nmbElementDisplayed = containerSize / elementSize;
 }
-function moveSlide() { }
+function moveSlide(index, container, widthPercentElement) {
+
+    console.log("movement", widthPercentElement);
+    container.querySelector('.block-carousel').style.transform = 'translateX(' + widthPercentElement * index + '%)';
+
+}
+
+
 
 
 
@@ -63,13 +70,13 @@ document.querySelectorAll(".carousel").forEach(carousel => {
 
     buttonSliderLeft.addEventListener('click', () => {
         console.log("left");
-        slideToRight(false, nmbElements, getNumberOfElementDisplayed(carousel));
+        index = slideToRight(index, false, nmbElements, getNumberOfElementDisplayed(carousel), carousel);
 
 
     });
     buttonSliderRight.addEventListener('click', () => {
         console.log("right");
-        slideToRight(true, nmbElements, getNumberOfElementDisplayed(carousel));
+        index = slideToRight(index, true, nmbElements, getNumberOfElementDisplayed(carousel), carousel);
     }
     );
     console.log(carousel);
