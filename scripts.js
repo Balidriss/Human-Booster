@@ -4,14 +4,35 @@
 // !! les éléments doivent être contenu dans un conteneur .block-carousel à l'interieur du conteneur parent .carousel.
 // !! Prendre la distance de l'élément et l'utiliser lors du mouvement du slider.
 
+// index va nous permettre d'incrémenter et connaitre la position du slider et sera sujet à des conditions.
+let currentIndex = 0;
 
-function slide(directionIsRight) {
+let nmbDisplayedElements = 0; // on peut récupérer le nombre d'élément affiché en prenant la taille du container et la taille du premier élément.
+
+console.log(currentIndex);
+function slideToRight(directionIsRight, nmbElements, nmbElementToDisplay) {
+    console.log("currentIndex :", currentIndex);
     if (directionIsRight) {
-
+        // on stop de count quand il y a déja les derniers élements affichés 
+        if (currentIndex < (nmbElements + nmbDisplayedElements)) {
+            currentIndex++;
+        }
     } else {
-
+        // on stop de count quand il y a déja les premiers élements affichés
+        if (currentIndex > nmbDisplayedElements) {
+            currentIndex--;
+        }
     }
+    console.log("currentIndex :", currentIndex);
+    moveSlide();
 }
+
+function moveSlide() {
+    //todo
+}
+
+
+
 
 
 
@@ -33,18 +54,18 @@ document.querySelectorAll(".carousel").forEach(carousel => {
     const nmbElements = carousel.querySelectorAll('.block-carousel > *').length;
     console.log(nmbElements);
 
-    let currentIndex = 0;
+
 
 
     buttonSliderLeft.addEventListener('click', () => {
         console.log("left");
-        slideToRight(true);
+        slideToRight(false, nmbElements);
 
 
     });
     buttonSliderRight.addEventListener('click', () => {
         console.log("right");
-        slideToRight(false);
+        slideToRight(true, nmbElements);
     }
     );
     console.log(carousel);
