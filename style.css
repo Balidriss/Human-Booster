@@ -72,7 +72,6 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
 
 /*#region ============================== GENERAL ==============================*/
 
-/* Je vais du plus général au plus détaillé une meilleur  visibilité du code en terme de priorité. Aussi je suis mon code html de haut en bas*/
 * {
     /* Je ne sais pas si c'est une bonne pratique, je veux juste être sur que je controle bien mes margin et padding */
     margin: 0;
@@ -117,6 +116,19 @@ footer li,
 .carousel-text p {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
+}
+
+a {
+
+    text-decoration: none;
+    transition-property: text-shadow;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+
+a:hover:not(.cta) {
+    text-shadow: 0 0 1.5em var(--darken);
+    color: var(--primaryColor);
 }
 
 section {
@@ -331,6 +343,8 @@ nav ul {
     letter-spacing: 0.04rem;
 }
 
+
+
 /* <ul> class contenant les logos facebook et insta */
 .socials {
     margin-left: 1rem;
@@ -369,9 +383,10 @@ nav ul {
 }
 
 /* Le lien Billetterie en rouge */
-.salon-nav li:last-child {
-
-    color: var(--primaryColor)
+.salon-nav li:last-child a {
+    display: flex;
+    color: var(--primaryColor);
+    align-items: center;
 }
 
 nav .ticket-icon {
@@ -975,6 +990,18 @@ footer ul {
     display: flex;
 }
 
+footer a {
+    color: var(--primaryColorLight);
+}
+
+footer p>a {
+    color: var(--secondaryColorLight);
+}
+
+footer p>a:hover {
+    color: var(--secondaryColorLight) !important;
+}
+
 footer li {
 
     color: var(--primaryColorLight);
@@ -982,6 +1009,10 @@ footer li {
     font-weight: 600;
     letter-spacing: 0.03rem;
     line-height: 0.75rem;
+}
+
+footer li a:hover {
+    color: var(--primaryColorDark) !important;
 }
 
 .block-footer p {
