@@ -759,8 +759,8 @@ form label {
     padding: 0.85rem 2rem;
     overflow: auto;
     border-radius: 0;
-
 }
+
 
 #section-newsletter [name=email] {
     border-bottom-left-radius: var(--borderRadiusCTA);
@@ -768,6 +768,7 @@ form label {
 }
 
 #section-newsletter [name=subscribe] {
+    cursor: pointer;
     border-bottom-right-radius: var(--borderRadiusCTA);
     border-top-right-radius: var(--borderRadiusCTA);
 }
