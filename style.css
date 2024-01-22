@@ -221,11 +221,14 @@ figure img {
 
 /* en attendant le script */
 .block-carousel {
-
+    transition: transform 1s ease-in-out;
+    width: 100%;
     order: 2;
     display: flex;
     z-index: -2;
 }
+
+
 
 .carousel {
     display: flex;
@@ -234,6 +237,9 @@ figure img {
     padding: 1rem;
 
 }
+
+
+
 
 /*  */
 
@@ -403,6 +409,8 @@ nav ul {
     margin-left: var(--marginMenuSalonLi);
 
 }
+
+
 
 .salon-nav li span {
     letter-spacing: 0.03rem;
@@ -710,6 +718,9 @@ h3 strong::after {
     letter-spacing: 0.05em;
     text-decoration: underline 0.1em var(--primaryColor);
 }
+
+
+
 
 
 /*#endregion ============================== BLOG ==============================*/
