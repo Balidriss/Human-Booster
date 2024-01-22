@@ -998,9 +998,7 @@ footer p>a {
     color: var(--secondaryColorLight);
 }
 
-footer p>a:hover {
-    color: var(--secondaryColorLight) !important;
-}
+
 
 footer li {
 
@@ -1011,9 +1009,6 @@ footer li {
     line-height: 0.75rem;
 }
 
-footer li a:hover {
-    color: var(--primaryColorDark) !important;
-}
 
 .block-footer p {
 
@@ -1026,6 +1021,11 @@ footer li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Je pense qu'on a pas besoin de mettre des effet dans le footer */
+footer a:hover {
+    color: currentColor !important;
 }
 
 /* On oblige les separateur du footeur d'appliquer cette couleur */
