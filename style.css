@@ -2,7 +2,7 @@
 ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le code.*/
 
 :root {
-
+    /* ====================================================================================================== */
     /* color theme */
     --primaryColorDark: #191819;
     --secondaryColorDark: #191819cc;
@@ -18,10 +18,8 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /* Font family */
     --primaryFont: 'Poppins', sans-serif;
     --fontUppercase: 'Work Sans', sans-serif;
-
-    /* =========
-    === FONT ===
-    ==========*/
+    /* ====================================================================================================== */
+    /* === FONT ===*/
     --primaryFontSize: 1.125rem;
     /* H1 et H2 */
     --hOneFontSize: 3.25rem;
@@ -34,6 +32,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /* espacement entre les sections */
     --marginSection: 4.3rem;
 
+    /* ====================================================================================================== */
     /*=== CTA === */
     --paddingCTAHeight: 1rem;
     /* !! Ceci influence la distance entre le rond et la bordure des CTA qui ont une icone !! */
@@ -47,10 +46,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --borderRadiusCTA: calc(var(--paddingCTAHeight)*2);
     /* influence les CTA qui ont une bordure */
     --borderThicknessCTA: 0.1rem;
-
-
-
-
+    /* ====================================================================================================== */
 
     /* font du header même taille que le menu  */
     --heightMenuAbout: 2.3rem;
@@ -90,7 +86,7 @@ nav,
     width: var(--mainWidthContainer);
 }
 
-
+/* je reset mes h */
 h1,
 h2,
 h3,
@@ -102,6 +98,7 @@ h6 {
     margin: 0;
     font-weight: 400;
     font-size: 1rem;
+    line-height: 1rem;
 }
 
 /* Applique le style particulier sur les elements qui en ont besoins */
@@ -118,6 +115,7 @@ footer li,
     text-transform: uppercase;
 }
 
+/* Effet d'ombre en hover */
 a {
 
     text-decoration: none;
@@ -131,13 +129,14 @@ a:hover:not(.cta) {
     color: var(--primaryColor);
 }
 
+/* espacement fixe entre les sections */
 section {
-    margin: var(--marginSection) 0;
+    margin-bottom: var(--marginSection);
 }
 
 
 
-
+/* !!! Articles sont des container flex !!! */
 section article {
     display: flex;
 }
@@ -436,7 +435,6 @@ h1 {
 }
 
 #section-carousel article {
-    display: flex;
     align-items: center;
     position: relative;
 
@@ -709,6 +707,11 @@ h3 strong::after {
 
 }
 
+/* décalage dans la section tarif */
+#section-newsletter {
+    margin-bottom: calc(var(--marginSection) - 2rem);
+}
+
 .block-mail-submit,
 #section-newsletter h2,
 .wavy-separator {
@@ -747,6 +750,8 @@ form label {
     color: var(--primaryColorLight);
     margin-left: 0.5rem;
 }
+
+/* TODO : Checkbox transparent // padding submit */
 
 .block-mail-submit {
     display: flex;
@@ -821,7 +826,19 @@ label[for="email"] {
     transform: rotate(15deg);
 }
 
-.text-container {
+
+/* #section-tarifs .text-container {
+    --decalMarginTarif: 2rem;
+    margin: 0 1rem;
+    margin-top: var();
+    padding-top: 1.25rem;
+}
+
+#section-newsletter {
+    margin-top: calc(var(--marginSection) - var(--decalMarginTarif));
+} */
+
+#section-tarifs .text-container {
     margin: 0 1rem;
     margin-top: 2rem;
     padding-top: 1.25rem;
