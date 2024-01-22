@@ -1,14 +1,19 @@
-//  Carousel, ma première approche : on affiche les elements qui se trouvent à partir de la seconde place  ( [1] ), 
-// on parcourt le tableau en duplicant le premiere ou le dernier élément au début ou a la fin (direction que l'utilisateur choisi). 
-// notes:
-// !! la taille du tableau doit être au minimum de 3
+//  Carousel, j'abondonne l'approche du tableau
+// Je vais utiliser une variable index qui sera assossié à l'élément.
 // !! overflow sur le conteneur du slider, 
-// !! les éléments doivent être contenu dans un autre conteneur à l'interieur avec une largeur proportionel à la largeur du conteneur parent.
-// !! Définir le nombre d'élément  à afficher par default à l'aide d'une attribut en HTML ?.
+// !! les éléments doivent être contenu dans un conteneur .block-carousel à l'interieur du conteneur parent .carousel.
 // !! Prendre la distance de l'élément et l'utiliser lors du mouvement du slider.
 
 
-let tabSliderElements = [];
+function slide(directionIsRight) {
+    if (directionIsRight) {
+
+    } else {
+
+    }
+}
+
+
 
 
 document.querySelectorAll(".carousel").forEach(carousel => {
@@ -24,6 +29,26 @@ document.querySelectorAll(".carousel").forEach(carousel => {
     buttonSliderRight.innerText = '>';
     carousel.appendChild(buttonSliderLeft);
     carousel.appendChild(buttonSliderRight);
+
+    const nmbElements = carousel.querySelectorAll('.block-carousel > *').length;
+    console.log(nmbElements);
+
+    let currentIndex = 0;
+
+
+    buttonSliderLeft.addEventListener('click', () => {
+        console.log("left");
+        slideToRight(true);
+
+
+    });
+    buttonSliderRight.addEventListener('click', () => {
+        console.log("right");
+        slideToRight(false);
+    }
+    );
     console.log(carousel);
-});
+}
+
+);
 
