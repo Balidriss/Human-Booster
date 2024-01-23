@@ -209,10 +209,55 @@ figure img {
     font-weight: 300;
 }
 
-.carousel {
-    overflow-x: hidden;
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 2rem;
 }
 
+/* en attendant le script */
+.block-carousel {
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    display: flex;
+    z-index: -2;
+    justify-content: flex-start;
+}
+
+
+
+
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+
+
+}
+
+
+
+
+/*  */
+
+.slider-button {
+    background-color: var(--primaryColor);
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+    color: var(--primaryColorLight);
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.slider-button-left {
+    left: 2rem;
+}
+
+.slider-button-right {
+    right: 2rem;
+}
 
 /*#region ====CTA==== */
 
@@ -397,6 +442,7 @@ nav ul {
 
 }
 
+
 /* fleche du bas indiquant un menu déroulant */
 .salon-nav li span {
     letter-spacing: 0.03rem;
@@ -469,6 +515,7 @@ h1 {
 
 
 #section-carousel .carousel-text {
+    padding-left: 1rem;
     margin-left: 5rem;
     position: absolute;
     z-index: 1;
@@ -517,15 +564,12 @@ h1 {
     filter: brightness(0.6);
 }
 
-/* en attendant le script */
-.block-carousel {
 
+/*#endregion ============================== CAROUSEL ==============================*/
 
-    z-index: -2;
-}
+/*#region ============================== PRESENTATION + STAND ==============================*/
 
-.carousel {
-
+.text-content {
     display: flex;
 
 }
@@ -700,8 +744,12 @@ h3 strong::after {
 
 #section-blog article {
     flex-direction: column;
-    margin: 2rem 1rem;
+    margin: 2rem 0.6rem;
 
+}
+
+#section-blog article:first-of-type {
+    margin-left: 0;
 }
 
 #section-blog article p {
@@ -718,6 +766,29 @@ h3 strong::after {
 
 }
 
+/* fait un effet fondu sur les bord droite et gauche du carousel */
+.slider-button-handle {
+    position: relative;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) 50% 50%/calc(100% - 2px) calc(100% - 2px),
+        radial-gradient(circle, transparent 99%, #ffffff 100%) 200% 0/100% 1%;
+
+}
+
+
+#section-blog .slider-button-left {
+    left: -5rem;
+
+}
+
+#section-blog .slider-button-right {
+    right: -5rem;
+
+}
+
+#section-blog .block-carousel {
+    transform: translate(0%);
+}
+
 .learn-more {
     color: var(--primaryColor);
     font-weight: 800;
@@ -726,6 +797,9 @@ h3 strong::after {
     letter-spacing: 0.05em;
     text-decoration: underline 0.1em var(--primaryColor);
 }
+
+
+
 
 
 /*#endregion ============================== BLOG ==============================*/
