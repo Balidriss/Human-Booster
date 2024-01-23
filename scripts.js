@@ -1,8 +1,8 @@
 // on récupére tous éléments avec la class carousel et j'applique le script du click sur les boutons créés
 const carousels = document.querySelectorAll(".carousel");
 
-//J'ai fait en sorte que le script s'adapte si il y a plusieur carousel sur le page, 
-//et est dépendant du nombre d'élément visible par l'utilisateur lors du chargement de la page.
+//J'ai fait en sorte que le script s'adapte si il y a plusieurs carousels sur le page, 
+//et est indépendant du nombre d'élément visible par l'utilisateur lors du chargement de la page.
 // ===> !!!!! Le script ne prend en compte les tailles que au moment du chargement de la page.
 
 // pour chaque élément avec la class carousel que mon querySelector à trouvé on appel la fonction qui mpermet de créer un carousel.

@@ -9,8 +9,6 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --primaryColorLight: #FFF;
     --primaryColor: #7E1625;
     --secondaryColorLight: #B2B3B3;
-    --bgDates: rgb(255, 255, 255, 0.2);
-    --bgNavGradientColor: linear-gradient(to left, rgba(25, 24, 25, 0.08) 0%, rgba(25, 24, 25, 0.01) 95.63%, rgba(25, 24, 25, 0.00) 100%);
     --darken: #000A;
     --lightOpacity: #ffffff33;
     --redOpacity: #7E162533;
@@ -32,7 +30,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --strongerTitlePart: 2.6rem;
     /* hauteur sauter de ligne dans les titres h2 */
     --lineHeightHTwo: 1rem;
-
+    /* ====================================================================================================== */
     /* espacement entre les sections */
     --marginSection: 4.3rem;
 
@@ -51,7 +49,6 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /* influence les CTA qui ont une bordure */
     --borderThicknessCTA: 0.1rem;
     /* ====================================================================================================== */
-
     /* fond du header même taille que le menu  */
     --heightMenuAbout: 2.3rem;
     /* menu 2nd ligne*/
@@ -81,7 +78,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     font-family: var(--primaryFont);
 }
 
-/* espacement marge du site*/
+/* !!! espacement marge du site !!! */
 main,
 nav,
 .block-footer {
@@ -108,6 +105,7 @@ h6 {
 /* Applique le style particulier sur les elements qui en ont besoins */
 h1,
 h2,
+h3,
 nav,
 .learn-more,
 .cta,
@@ -128,6 +126,7 @@ a {
     transition-timing-function: ease-in-out;
 }
 
+/* on applique un effet d'ombre quand on passe la souris sur tous les hyperlien éxcépté les bouton CTA */
 a:hover:not(.cta) {
     text-shadow: 0 0 1.5em var(--darken);
     color: var(--primaryColor);
@@ -139,16 +138,12 @@ section {
 }
 
 
-
 /* !!! Articles sont des container flex !!! */
-section article {
-    display: flex;
-}
-
-
 article {
+    display: flex;
     margin: 0;
 }
+
 
 h2,
 h3 {
@@ -181,15 +176,14 @@ h2 strong::before {
 
 }
 
-/* On compense l'espace supplémentaire crée par line-height h2 entre les sections */
+/* !!!! On compense l'espace supplémentaire créé par line-height h2 entre les sections */
 section h2:first-child {
     display: flex;
     flex-direction: column;
     margin-top: 0;
-
-
 }
 
+/* on enleve les puces de liste */
 ul {
     list-style: none;
 }
@@ -199,7 +193,7 @@ li {
     align-items: center;
 }
 
-/* on enleve l'espace du tag figure */
+/* permet d'enlever l'espace créé par les tag figure */
 figure img {
     vertical-align: top
 }
@@ -220,17 +214,14 @@ figure img {
     margin: 0 2rem;
 }
 
-/* en attendant le script */
+/*#region ===== Carousel ===== */
+
 .block-carousel {
     transition: transform 1s ease-in-out;
     width: 100%;
     display: flex;
-
     justify-content: flex-start;
 }
-
-
-
 
 .carousel {
     display: flex;
@@ -239,10 +230,7 @@ figure img {
 
 }
 
-
-
-
-/*  */
+/* Btn slider */
 
 .slider-button {
     border-radius: 50%;
@@ -250,6 +238,7 @@ figure img {
     position: absolute;
     top: 50%;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .slider-button-left {
@@ -259,6 +248,8 @@ figure img {
 .slider-button-right {
     right: 2rem;
 }
+
+/*#endregion ===== Carousel ===== */
 
 /*#region ====CTA==== */
 
@@ -324,7 +315,7 @@ figure img {
 
 }
 
-/* petite animation sur le CTA avec un ticket quand on hover */
+/* petite animation sur le CTA qui ont un ticket quand on les survole */
 #section-tarifs .cta-with-icon:hover .icon-in-cta,
 #section-carousel .cta-with-icon:hover .icon-in-cta {
 
@@ -360,13 +351,16 @@ figure img {
 
 /*#endregion ====CTA==== */
 
-
-
-
-
 /*#endregion ============================== GENERAL ==============================*/
 
 /*#region ============================== HEADER ==============================*/
+
+/* !!!
+la nav : 
+about = première ligne
+salon = deuxième ligne
+*/
+
 
 /* Fixe un fond coloré en haut de la page avec la même hauteur que la première ligne de navigation */
 .gradient-bg {
@@ -376,7 +370,7 @@ figure img {
     top: 0;
     left: 0;
     height: var(--heightMenuAbout);
-    background: var(--bgNavGradientColor);
+    background: linear-gradient(to left, rgba(25, 24, 25, 0.08) 0%, rgba(25, 24, 25, 0.01) 95.63%, rgba(25, 24, 25, 0.00) 100%);
 }
 
 
@@ -407,12 +401,11 @@ nav ul {
 }
 
 
-/* Hauteur partagé avec font coloré fixe */
+/* La hauteur est partagé avec le font en haut de la page */
 .about-nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
     height: var(--heightMenuAbout);
 
 }
@@ -454,7 +447,7 @@ nav ul {
 }
 
 
-/* fleche du bas indiquant un menu déroulant */
+/* Indicateur de menu déroulant */
 .salon-nav li span {
     display: inline-block;
     letter-spacing: 0.03rem;
@@ -484,7 +477,7 @@ nav .ticket-icon {
 
 /*#endregion ============================== HEADER ==============================*/
 
-/*#region ============================== CAROUSEL ==============================*/
+/*#region ============================== SECTION CAROUSEL ==============================*/
 
 
 #section-carousel {
@@ -536,7 +529,7 @@ h1 {
     z-index: 1;
 }
 
-/* tous les éléments dans le text de la section carousel sauf mes boutons CTA */
+/* j'applique la couleur de ma police sur tous les éléments dans le text de la section carousel sauf mes boutons CTA */
 #section-carousel .carousel-text *:not(.cta) {
     color: var(--primaryColorLight);
 }
@@ -548,7 +541,7 @@ h1 {
 .carousel-text p:first-of-type {
     letter-spacing: 0.04rem;
     font-size: 0.87rem;
-    background-color: var(--bgDates);
+    background-color: #ffffff33;
     padding: 0.2rem 1.1rem;
     margin: 1rem 0;
     border-radius: 2rem;
@@ -579,21 +572,11 @@ h1 {
     filter: brightness(0.6);
 }
 
-
-/*#endregion ============================== CAROUSEL ==============================*/
-
-/*#region ============================== PRESENTATION + STAND ==============================*/
-
-.text-content {
-    display: flex;
-
-}
-
 /*  */
 
-/*#endregion ============================== CAROUSEL ==============================*/
+/*#endregion ============================== SECTION CAROUSEL ==============================*/
 
-/*#region ============================== PRESENTATION + STAND ==============================*/
+/*#region ============================== SECTION PRESENTATION + STAND ==============================*/
 
 .text-content {
     display: flex;
@@ -677,9 +660,9 @@ section .text-content p:last-of-type {
 }
 
 
-/*#endregion ============================== PRESENTATION + STAND ==============================*/
+/*#endregion ============================== SECTION PRESENTATION + STAND ==============================*/
 
-/*#region ============================== STATS ==============================*/
+/*#region ============================== SECTION STATS ==============================*/
 
 
 #section-stats article {
@@ -696,7 +679,7 @@ section .text-content p:last-of-type {
 
 /* en modifiant juste une variable on a l'espacement qui reste proportionel */
 .stat-block {
-    margin: calc(var(--spacingStatBlock)*4) var(--spacingStatBlock);
+    margin: calc(var(--spacingStatBlock)*3) var(--spacingStatBlock);
     padding-right: var(--spacingStatBlock);
     padding-left: var(--spacingStatBlock);
 
@@ -708,7 +691,7 @@ section .text-content p:last-of-type {
     color: #ffffffcc;
 }
 
-/* un autre separateur mais avec l'utilisation des bordures */
+/* un autre type de separateur avec l'utilisation des bordures */
 .stat-block:not(.stat-block:last-child) {
     border-right: dotted 1px var(--secondaryColorLight);
 }
@@ -716,8 +699,6 @@ section .text-content p:last-of-type {
 /* == h3 == */
 
 .stat-block h3 {
-    font-family: var(--fontUppercase);
-    text-transform: uppercase;
     font-weight: 600;
     margin-bottom: var(--spacingStatBlock);
     letter-spacing: 0.04rem;
@@ -753,11 +734,11 @@ h3 strong::after {
 
 }
 
-/*#endregion ============================== STATS ==============================*/
+/*#endregion ============================== SECTION STATS ==============================*/
 
-/*#region ============================== BLOG ==============================*/
+/*#region ============================== SECTION BLOG ==============================*/
 
-
+/* !!! nécessaire pour les bouton slider */
 #section-blog {
     position: relative;
 }
@@ -814,10 +795,10 @@ h3 strong::after {
 
 
 
-/*#endregion ============================== BLOG ==============================*/
+/*#endregion ============================== SECTION  BLOG ==============================*/
 
 
-/*#region ============================== NEWSLETTER ==============================*/
+/*#region ============================== SECTION NEWSLETTER ==============================*/
 #section-newsletter {
     background-image: url("assets/img/white_grape_bg.jpg");
     background-color: var(--darken);
@@ -862,7 +843,6 @@ h3 strong::after {
 }
 
 form {
-
     width: 33%;
     margin: auto;
 }
@@ -887,12 +867,13 @@ form label {
     border-radius: 0;
 }
 
-
+/* champs d'insertion email */
 #section-newsletter [name=email] {
     border-bottom-left-radius: var(--borderRadiusCTA);
     border-top-left-radius: var(--borderRadiusCTA);
 }
 
+/* bouton d'inscription */
 #section-newsletter [name=subscribe] {
     cursor: pointer;
     padding-right: 3rem;
@@ -900,12 +881,14 @@ form label {
     border-top-right-radius: var(--borderRadiusCTA);
 }
 
+/* text au dessu du champ email */
 label[for="email"] {
     font-weight: 600;
     letter-spacing: 0.1em;
     font-size: 0.75rem;
 }
 
+/* text d'éxemple dans le champ email */
 [placeholder] {
     color: var(--darken);
     font-family: var(--primaryFont);
@@ -927,6 +910,7 @@ label[for="consent"] {
     margin: 0;
 }
 
+/* on applique la meme couleur de text que son parent => label[for="consent"] */
 label[for="consent"] a {
     color: currentColor !important;
     font-weight: 600;
@@ -956,10 +940,10 @@ label[for="consent"] a {
     border-width: 0.1em;
 }
 
-/*#endregion ============================== NEWSLETTER ==============================*/
+/*#endregion ============================== SECTION NEWSLETTER ==============================*/
 
 
-/*#region ============================== TARIFS ============================== */
+/*#region ============================== SECTION TARIFS ============================== */
 
 #section-tarifs h2 {
     margin-bottom: 1.75rem;
@@ -969,9 +953,6 @@ label[for="consent"] a {
     transform: rotate(15deg);
 }
 
-
-
-
 #section-tarifs .text-container {
     margin: 0 1rem;
     margin-top: 2rem;
@@ -979,7 +960,7 @@ label[for="consent"] a {
 }
 
 
-.text-container p {
+#section-tarifs .text-container p {
     padding: 1rem 3.5rem;
     padding-left: 0;
     margin-left: 0;
@@ -995,7 +976,7 @@ label[for="consent"] a {
     margin-left: 3rem;
 }
 
-figure {
+#section-tarifs figure {
     width: auto;
     height: max-content;
 }
@@ -1004,6 +985,12 @@ figure {
     margin-top: 2rem;
 }
 
+
+.tarifs-cta-container {
+    margin-top: 1rem;
+}
+
+/* ==== tableau des tarifs ==== */
 table {
     margin: 1rem;
     border-collapse: collapse;
@@ -1041,13 +1028,10 @@ td:last-child p {
     font-size: 1rem;
 }
 
-.tarifs-cta-container {
-    margin-top: 1rem;
-}
 
-/*#endregion ============================== TARIFS ============================== */
+/*#endregion ============================== SECTION TARIFS ============================== */
 
-/*#region ============================== CONTACT ============================== */
+/*#region ============================== SECTION CONTACT ============================== */
 
 #section-contact article {
     color: var(--primaryColorLight);
@@ -1121,15 +1105,9 @@ td:last-child p {
     margin: 0.3em 0.5em 0.3em 0;
 }
 
-#section-contact figure {
-    width: 100%;
-    height: 475px;
-    overflow: hidden;
 
-}
-
-/*#endregion ============================== CONTACT ============================== */
-/*#region ============================== FOOTER ==============================*/
+/*#endregion ============================== SECTION CONTACT ============================== */
+/*#region ============================== SECTION FOOTER ==============================*/
 
 footer {
     margin-top: 3rem;
@@ -1168,6 +1146,7 @@ footer li {
     font-size: 0.7rem;
 }
 
+/* de même que dans le haut du site, j'associe avec la hauteur fixe du fond en bas de la page */
 .block-footer {
     height: var(--heightFooter);
     display: flex;
@@ -1175,12 +1154,12 @@ footer li {
     align-items: center;
 }
 
-/* Je pense qu'on a pas besoin de mettre des effet dans le footer */
+/* Je ne pense )as que l'on a besoin de mettre des effets dans le footer */
 footer a:hover {
     color: currentColor !important;
 }
 
-/* On oblige les separateur du footeur d'appliquer cette couleur */
+/* On oblige les separateurs du footer d'appliquer cette couleur */
 footer .separator li::before {
     color: var(--secondaryColorLight) !important;
 
@@ -1196,6 +1175,4 @@ footer .separator li::before {
     background: var(--primaryColor);
 }
 
-
-
-/*#endregion ============================== FOOTER ==============================*/
+/*#endregion ============================== SECTION FOOTER ==============================*/
