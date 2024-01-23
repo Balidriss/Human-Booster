@@ -219,7 +219,7 @@ figure img {
 
 /*#region ====CTA==== */
 
-/* les cta sont des tag <a> a part excepté celui de la newsletter qui est un input*/
+/* les cta sont des tag <a> excepté celui de la newsletter qui est un input*/
 /* Je généralise le bouton cta */
 .cta {
 
@@ -697,10 +697,6 @@ h3 strong::after {
 
 /* TODO ======= Carousel */
 
-
-
-
-
 #section-blog article {
     flex-direction: column;
     margin: 2rem 1rem;
@@ -831,26 +827,47 @@ label[for="email"] {
     text-transform: none;
 }
 
-
-#consent {
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-
+.block-consent {
+    display: flex;
 }
 
-
-[for="consent"] {
+/* text consent */
+label[for="consent"] {
     font-weight: 400;
     font-size: 0.75em;
     color: var(--secondaryColorLight);
     line-height: 1rem;
-    display: flex;
-    align-items: flex-start;
-
+    margin: 0;
 }
 
+label[for="consent"] a {
+    color: currentColor !important;
+    font-weight: 600;
+    text-decoration: none;
+}
 
+/* on personalise un checkbox virtuel car no peut pas personaliser le réel  */
+#consent {
+    appearance: none;
+    display: flex;
+}
 
+/* checkbox virtuel  */
+#consent::before {
+    height: fit-content;
+    content: "";
+    vertical-align: top;
+    margin-right: 0.5rem;
+    padding: 0.46rem;
+    border-radius: 0.1875rem;
+    border: 1px solid #B2B3B3;
+    cursor: pointer;
+}
+
+#consent:checked::before {
+    background-color: #7E1625;
+    border-width: 0.1em;
+}
 
 /*#endregion ============================== NEWSLETTER ==============================*/
 
