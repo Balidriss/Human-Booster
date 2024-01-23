@@ -271,6 +271,40 @@ figure img {
 
 }
 
+/* petite animation sur le CTA avec un ticket quand on hover */
+#section-tarifs .cta-with-icon:hover .icon-in-cta,
+#section-carousel .cta-with-icon:hover .icon-in-cta {
+
+    animation: 1s ease-in-out infinite shakeTicket;
+}
+
+@keyframes shakeTicket {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    10% {
+        transform: rotate(15deg);
+    }
+
+    30% {
+        transform: rotate(45deg);
+    }
+
+    40% {
+        transform: rotate(15deg);
+    }
+
+    66% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+
 /*#endregion ====CTA==== */
 
 
@@ -831,37 +865,7 @@ label[for="email"] {
 }
 
 
-/* petite animation sur le CTA quand on hover */
-#section-tarifs .cta-with-icon:hover .icon-in-cta {
 
-    animation: 1s ease-in-out infinite shakeTicket;
-}
-
-@keyframes shakeTicket {
-    0% {
-        transform: rotate(45deg);
-    }
-
-    10% {
-        transform: rotate(15deg);
-    }
-
-    30% {
-        transform: rotate(45deg);
-    }
-
-    40% {
-        transform: rotate(15deg);
-    }
-
-    66% {
-        transform: rotate(15deg);
-    }
-
-    100% {
-        transform: rotate(15deg);
-    }
-}
 
 #section-tarifs .text-container {
     margin: 0 1rem;
