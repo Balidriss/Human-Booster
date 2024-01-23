@@ -693,7 +693,7 @@ h3 strong::after {
 
 #section-blog article {
     flex-direction: column;
-    margin: 2rem 1rem;
+    margin: 2rem 0.6rem;
 
 }
 
@@ -732,6 +732,10 @@ h3 strong::after {
 #section-blog .slider-button-right {
     right: -5rem;
 
+}
+
+#section-blog .block-carousel {
+    transform: translate(0%);
 }
 
 .learn-more {

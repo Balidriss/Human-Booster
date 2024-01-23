@@ -1,4 +1,3 @@
-//  Carousel, j'abondonne l'approche du tableau
 // Je vais utiliser une variable index qui sera assossié à l'élément.
 // !! overflow sur le conteneur du slider, 
 // !! les éléments doivent être contenu dans un conteneur .block-carousel à l'interieur du conteneur parent .carousel.
@@ -23,26 +22,18 @@ function slideToRight(currentIndex, directionIsRight, nmbElements, nmbDisplayedE
 
         }
     }
-    moveSlide(currentIndex, container, 100 / nmbDisplayedElements);
+    moveSlide(currentIndex, container, distanceToSlide(container));
     console.log("currentIndex :", currentIndex);
     return currentIndex;
 
 }
 
 // j'assume que les éléments ont tous la même taille
-function getNumberOfElementDisplayed(container) {
-    const containerSize = container.offsetWidth;
-    const blockContainer = container.firstElementChild;
-    // premier element du carousel
-    const firstElement = blockContainer.firstElementChild;
-    //on calcule la largeur en rpenant compte les margins
-    elementComputedStyle = window.getComputedStyle(firstElement);
-    elementSize = parseFloat(elementComputedStyle.width) +
-        parseFloat(elementComputedStyle.marginLeft) +
-        parseFloat(elementComputedStyle.marginRight);
+function distanceToSlide(container) {
 
-    console.log("fonction get number to display", containerSize, elementSize, containerSize / elementSize)
-    return Math.trunc(nmbElementDisplayed = containerSize / elementSize);
+    const containerSize = container.offsetWidth;
+    console.log("fonction distance de slide ", containerSize, elementSize, containerSize / getFirstElementTotalSize(container))
+    return 100 / Math.round(containerSize / getFirstElementTotalSize(container));
 }
 function moveSlide(index, container, widthPercentElement) {
 
@@ -51,10 +42,26 @@ function moveSlide(index, container, widthPercentElement) {
 
 }
 
+//on calcule la largeur en prenant compte les margins
+function getFirstElementTotalSize(container) {
+    const containerSize = container.offsetWidth;
+    const blockContainer = container.firstElementChild;
+    // premier element du carousel
+    const firstElement = blockContainer.firstElementChild;
+    firstElementComputedStyle = window.getComputedStyle(firstElement);
+    console.log(firstElementComputedStyle.marginRight);
+    return elementSize = parseFloat(firstElementComputedStyle.width) +
+        parseFloat(firstElementComputedStyle.marginRight);
+
+}
+// on récupére le nombre d'élément supposé être en vue dans le conteneur
+function getNumberOfElementOnDisplay(container) {
+    return container.offsetWidth / getFirstElementTotalSize(container);
+}
 
 
 
-
+// on récupére tous éléments avec la class carousel et j'applique le script du click sur les boutons créés
 document.querySelectorAll(".carousel").forEach(carousel => {
 
     // Je créé mes boutons pour chaque carousel et je les assigne
@@ -69,21 +76,21 @@ document.querySelectorAll(".carousel").forEach(carousel => {
     carousel.parentNode.appendChild(buttonSliderLeft);
     carousel.parentNode.appendChild(buttonSliderRight);
 
+    // nombre total d'éléments y compris les cachés
     const nmbElements = carousel.querySelectorAll('.block-carousel > *').length;
     console.log(nmbElements);
-    getNumberOfElementDisplayed(carousel);
 
 
-
+    console.log("nmb elemnt display", getNumberOfElementOnDisplay(carousel));
     buttonSliderLeft.addEventListener('click', () => {
         console.log("left");
-        index = slideToRight(index, false, nmbElements, getNumberOfElementDisplayed(carousel), carousel);
+        index = slideToRight(index, false, nmbElements, getNumberOfElementOnDisplay(carousel), carousel);
 
 
     });
     buttonSliderRight.addEventListener('click', () => {
         console.log("right");
-        index = slideToRight(index, true, nmbElements, getNumberOfElementDisplayed(carousel), carousel);
+        index = slideToRight(index, true, nmbElements, getNumberOfElementOnDisplay(carousel), carousel);
     }
     );
     console.log(carousel);
