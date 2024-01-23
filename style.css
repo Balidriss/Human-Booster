@@ -15,12 +15,16 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --lightOpacity: #ffffff33;
     --redOpacity: #7E162533;
 
+
+    /* ====================================================================================================== */
+    /* === FONT ===*/
+
     /* Font family */
     --primaryFont: 'Poppins', sans-serif;
     --fontUppercase: 'Work Sans', sans-serif;
-    /* ====================================================================================================== */
-    /* === FONT ===*/
+
     --primaryFontSize: 1.125rem;
+
     /* H1 et H2 */
     --hOneFontSize: 3.25rem;
     --hTwoFontSize: 0.875rem;
@@ -48,7 +52,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     --borderThicknessCTA: 0.1rem;
     /* ====================================================================================================== */
 
-    /* font du header même taille que le menu  */
+    /* fond du header même taille que le menu  */
     --heightMenuAbout: 2.3rem;
     /* menu 2nd ligne*/
     --menuSpacing: 3rem;
@@ -63,7 +67,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /*==================================================
     1241px est la largeur entre les marges de la maquette
     ====================================================*/
-    --mainWidthContainer: 1241px;
+    --mainWidthContainer: 1240px;
 }
 
 /*#region ============================== GENERAL ==============================*/
@@ -445,11 +449,15 @@ nav ul {
 
 /* fleche du bas indiquant un menu déroulant */
 .salon-nav li span {
+    display: inline-block;
     letter-spacing: 0.03rem;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--primaryColor);
-    margin-left: calc(var(--marginMenuSalonLi)/4);
+    margin-left: 0.2em;
+    transform: scaleY(0.8) scaleX(1.5);
+
+
 
 }
 
@@ -458,7 +466,7 @@ nav ul {
     display: flex;
     color: var(--primaryColor);
     align-items: center;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.09rem;
 }
 
 nav .ticket-icon {
