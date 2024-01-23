@@ -789,7 +789,7 @@ form label {
     margin-left: 0.5rem;
 }
 
-/* TODO : Checkbox transparent // padding submit */
+/* TODO : Checkbox transparent */
 
 .block-mail-submit {
     display: flex;
@@ -812,6 +812,7 @@ form label {
 
 #section-newsletter [name=subscribe] {
     cursor: pointer;
+    padding-right: 3rem;
     border-bottom-right-radius: var(--borderRadiusCTA);
     border-top-right-radius: var(--borderRadiusCTA);
 }
