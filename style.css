@@ -159,9 +159,6 @@ h2 {
     margin-bottom: 2rem;
 }
 
-
-/* ======= TODO : Regarder si l'inverse n'est pas mieu */
-
 /* deuxieme partie des titre h2 qui ont une police différente */
 h2 strong {
     color: var(--secondaryColorDark);
@@ -625,10 +622,14 @@ section .text-content p:last-of-type {
 
 /*#region ============================== STATS ==============================*/
 
+
 #section-stats article {
     background-image: url("assets/img/black_grape_bg.jpg");
     background-color: var(--darken);
     background-blend-mode: darken;
+    background-position: 50% 80%;
+    background-size: cover;
+
     display: flex;
     color: var(--primaryColorLight);
     padding: 1.7rem 0.5rem;
@@ -735,6 +736,8 @@ h3 strong::after {
     background-image: url("assets/img/white_grape_bg.jpg");
     background-color: var(--darken);
     background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     padding: 2.6rem 0;
@@ -784,8 +787,6 @@ form label {
     color: var(--primaryColorLight);
     margin-left: 0.5rem;
 }
-
-/* TODO : Checkbox transparent */
 
 .block-mail-submit {
     display: flex;
