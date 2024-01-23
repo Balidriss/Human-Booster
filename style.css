@@ -245,10 +245,8 @@ figure img {
 /*  */
 
 .slider-button {
-    background-color: var(--primaryColor);
     border-radius: 50%;
     padding: 0.5rem 1rem;
-    color: var(--primaryColorLight);
     position: absolute;
     top: 50%;
     cursor: pointer;
@@ -279,9 +277,19 @@ figure img {
 }
 
 /* ==== Je personalise le bouton cta ==== */
-.cta-red {
+.cta-red,
+.btn-red {
     color: var(--primaryColorLight);
     background-color: var(--primaryColor);
+}
+
+/* bouton carousel si on est a la limite */
+.btn-disable {
+    background-color: transparent;
+    border: solid var(--primaryColor) 1px;
+    color: var(--primaryColor);
+
+
 }
 
 /* CTA avec fond blanc */
