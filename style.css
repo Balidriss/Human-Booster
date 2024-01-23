@@ -225,7 +225,7 @@ figure img {
     transition: transform 1s ease-in-out;
     width: 100%;
     display: flex;
-    z-index: -2;
+
     justify-content: flex-start;
 }
 
@@ -236,7 +236,6 @@ figure img {
     display: flex;
     overflow-x: hidden;
     position: relative;
-
 
 }
 
@@ -681,7 +680,6 @@ section .text-content p:last-of-type {
     background-blend-mode: darken;
     background-position: 50% 80%;
     background-size: cover;
-
     display: flex;
     color: var(--primaryColorLight);
     padding: 1.7rem 0.5rem;
@@ -751,11 +749,15 @@ h3 strong::after {
 
 /*#region ============================== BLOG ==============================*/
 
-/* TODO ======= Carousel */
+
+#section-blog {
+    position: relative;
+}
 
 #section-blog article {
     flex-direction: column;
     margin: 2rem 0.6rem;
+
 
 }
 
@@ -772,18 +774,9 @@ h3 strong::after {
 
 #section-blog .cta-container {
     display: flex;
-
     justify-content: center;
-
 }
 
-/* fait un effet fondu sur les bord droite et gauche du carousel */
-.slider-button-handle {
-    position: relative;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) 50% 50%/calc(100% - 2px) calc(100% - 2px),
-        radial-gradient(circle, transparent 99%, #ffffff 100%) 200% 0/100% 1%;
-
-}
 
 
 #section-blog .slider-button-left {
@@ -803,10 +796,10 @@ h3 strong::after {
 .learn-more {
     color: var(--primaryColor);
     font-weight: 800;
-    text-underline-offset: 0.3em;
     font-size: 0.75rem;
     letter-spacing: 0.05em;
     text-decoration: underline 0.1em var(--primaryColor);
+    text-underline-offset: 0.3em;
 }
 
 
