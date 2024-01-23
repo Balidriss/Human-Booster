@@ -1,14 +1,26 @@
-// on récupére tous éléments avec la class carousel et j'applique le script du click sur les boutons créés
-const carousels = document.querySelectorAll(".carousel");
+
+
+
+// on attend que la page à chargé
+window.addEventListener('load', () => {
+
+    // on récupére tous éléments avec la class carousel et j'applique le script du click sur les boutons créés
+    const carousels = document.querySelectorAll(".carousel");
+    // pour chaque élément avec la class carousel que mon querySelector à trouvé on appel la fonction qui permet de créer un carousel.
+    for (const carousel of carousels) {
+        createCarousel(carousel);
+    }
+
+});
+
+
 
 //J'ai fait en sorte que le script s'adapte si il y a plusieurs carousels sur le page, 
 //et est indépendant du nombre d'élément visible par l'utilisateur lors du chargement de la page.
 // ===> !!!!! Le script ne prend en compte les tailles que au moment du chargement de la page.
 
-// pour chaque élément avec la class carousel que mon querySelector à trouvé on appel la fonction qui mpermet de créer un carousel.
-for (const carousel of carousels) {
-    createCarousel(carousel);
-}
+
+
 function createCarousel(container) {
     // index 0 est l'enfant direct du block-carousel dans carousel.
     let index = 0;
@@ -99,7 +111,7 @@ function distanceToSlide(container) {
 }
 function moveSlide(index, container, widthPercentElement) {
 
-    // le pourcentage applique par translate est proportionel a notre index, associer avec la transition dans la class on obtient un mouvement fluid.
+    // le pourcentage applique par translate est proportionel a notre index, associé avec la transition dans la class css on obtient un mouvement fluid.
     container.querySelector('.block-carousel').style.transform = 'translateX(' + widthPercentElement * -index + '%)';
 
 }

@@ -4,13 +4,13 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
 :root {
     /* ====================================================================================================== */
     /* color theme */
-    --primaryColorDark: #191819;
-    --secondaryColorDark: #191819cc;
-    --primaryColorLight: #FFF;
-    --primaryColor: #7E1625;
-    --secondaryColorLight: #B2B3B3;
+    --primaryColorBlack: #191819;
+    --secondaryColorBlack: #191819cc;
+    --primaryColorWhite: #FFF;
+    --primaryColorRed: #7E1625;
+    --secondaryColorWhite: #B2B3B3;
     --darken: #000A;
-    --lightOpacity: #ffffff33;
+    --whiteOpacity: #ffffff33;
     --redOpacity: #7E162533;
 
 
@@ -74,7 +74,7 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     margin: 0;
     padding: 0;
     /*  */
-    color: var(--primaryColorDark);
+    color: var(--primaryColorBlack);
     font-family: var(--primaryFont);
 }
 
@@ -129,7 +129,7 @@ a {
 /* on applique un effet d'ombre quand on passe la souris sur tous les hyperlien éxcépté les bouton CTA */
 a:hover:not(.cta) {
     text-shadow: 0 0 1.5em var(--darken);
-    color: var(--primaryColor);
+    color: var(--primaryColorRed);
 }
 
 /* espacement fixe entre les sections */
@@ -138,7 +138,7 @@ section {
 }
 
 
-/* !!! Articles sont des container flex !!! */
+/* !!! Les articles sont des container flex !!! */
 article {
     display: flex;
     margin: 0;
@@ -152,7 +152,7 @@ h3 {
 }
 
 h2 {
-    color: var(--primaryColor);
+    color: var(--primaryColorRed);
     letter-spacing: 0.04rem;
     font-weight: 500;
     margin-bottom: 2rem;
@@ -160,7 +160,7 @@ h2 {
 
 /* deuxieme partie des titre h2 qui ont une police différente */
 h2 strong {
-    color: var(--secondaryColorDark);
+    color: var(--secondaryColorBlack);
     font-family: var(--primaryFont);
     text-transform: none;
     font-size: var(--strongerTitlePart);
@@ -260,7 +260,7 @@ figure img {
     font-size: var(--fontSizeCTA);
     font-weight: var(--weightCTA);
     text-decoration: none;
-    color: var(--primaryColorLight);
+    color: var(--primaryColorWhite);
     padding: var(--paddingCTA);
     border: none;
     border-radius: var(--borderRadiusCTA);
@@ -270,15 +270,15 @@ figure img {
 /* ==== Je personalise le bouton cta ==== */
 .cta-red,
 .btn-red {
-    color: var(--primaryColorLight);
-    background-color: var(--primaryColor);
+    color: var(--primaryColorWhite);
+    background-color: var(--primaryColorRed);
 }
 
 /* bouton carousel si on est a la limite */
 .btn-disable {
     background-color: transparent;
-    border: solid var(--primaryColor) 1px;
-    color: var(--primaryColor);
+    border: solid var(--primaryColorRed) 1px;
+    color: var(--primaryColorRed);
 
 
 }
@@ -286,14 +286,14 @@ figure img {
 /* CTA avec fond blanc */
 .cta-white {
     border: solid var(--borderThicknessCTA);
-    color: var(--primaryColor);
-    background-color: var(--primaryColorLight);
+    color: var(--primaryColorRed);
+    background-color: var(--primaryColorWhite);
 }
 
 /* balise div contenant l'icone, permet de créer le fond rond sans avoir l'icone hérité des bordures rondes */
 .icon-in-cta {
 
-    background-color: var(--lightOpacity);
+    background-color: var(--whiteOpacity);
     border-radius: 50%;
     align-items: center;
     display: flex;
@@ -453,7 +453,7 @@ nav ul {
     letter-spacing: 0.03rem;
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--primaryColor);
+    color: var(--primaryColorRed);
     margin-left: 0.2em;
     transform: scaleY(0.8) scaleX(1.5);
 
@@ -464,7 +464,7 @@ nav ul {
 /* Le lien Billetterie en rouge */
 .salon-nav li:last-child a {
     display: flex;
-    color: var(--primaryColor);
+    color: var(--primaryColorRed);
     align-items: center;
     letter-spacing: 0.09rem;
 }
@@ -505,7 +505,7 @@ h1 {
 }
 
 .cta-carousel .cta:first-of-type {
-    border: solid var(--borderThicknessCTA) var(--primaryColorLight);
+    border: solid var(--borderThicknessCTA) var(--primaryColorWhite);
     margin-left: 0;
 
 }
@@ -531,7 +531,7 @@ h1 {
 
 /* j'applique la couleur de ma police sur tous les éléments dans le text de la section carousel sauf mes boutons CTA */
 #section-carousel .carousel-text *:not(.cta) {
-    color: var(--primaryColorLight);
+    color: var(--primaryColorWhite);
 }
 
 .carousel-text p {
@@ -559,7 +559,7 @@ h1 {
     font-size: 0.6rem;
     padding: 0.5rem;
     width: fit-content;
-    border-top: dotted 1px var(--primaryColorLight);
+    border-top: dotted 1px var(--primaryColorWhite);
 
 }
 
@@ -602,7 +602,7 @@ section .text-content p {
 }
 
 section .text-content p:last-of-type {
-    color: var(--secondaryColorDark);
+    color: var(--secondaryColorBlack);
     font-size: 0.875rem;
     line-height: 1.5rem;
 }
@@ -650,7 +650,7 @@ section .text-content p:last-of-type {
 #section-stand .text-content p:first-of-type::first-letter {
 
     font-size: 3.87rem;
-    color: var(--primaryColor);
+    color: var(--primaryColorRed);
     /* Text s'adapte autour de la lettre  */
     float: left;
     font-weight: 600;
@@ -672,7 +672,7 @@ section .text-content p:last-of-type {
     background-position: 50% 80%;
     background-size: cover;
     display: flex;
-    color: var(--primaryColorLight);
+    color: var(--primaryColorWhite);
     padding: 1.7rem 0.5rem;
 
 }
@@ -693,7 +693,7 @@ section .text-content p:last-of-type {
 
 /* un autre type de separateur avec l'utilisation des bordures */
 .stat-block:not(.stat-block:last-child) {
-    border-right: dotted 1px var(--secondaryColorLight);
+    border-right: dotted 1px var(--secondaryColorWhite);
 }
 
 /* == h3 == */
@@ -707,13 +707,13 @@ section .text-content p:last-of-type {
 
 .stat-block p,
 .stat-block h3 {
-    color: var(--primaryColorLight);
+    color: var(--primaryColorWhite);
 
 }
 
 h3 strong {
 
-    color: var(--primaryColor);
+    color: var(--primaryColorRed);
     font-size: 3.85rem;
     line-height: 3.85rem;
     font-weight: inherit;
@@ -722,7 +722,7 @@ h3 strong {
 }
 
 h3 strong sup {
-    color: var(--primaryColor);
+    color: var(--primaryColorRed);
     font-size: 0.5em;
     text-transform: none;
 }
@@ -783,17 +783,13 @@ h3 strong::after {
 }
 
 .learn-more {
-    color: var(--primaryColor);
+    color: var(--primaryColorRed);
     font-weight: 800;
     font-size: 0.75rem;
     letter-spacing: 0.05em;
-    text-decoration: underline 0.1em var(--primaryColor);
+    text-decoration: underline 0.1em var(--primaryColorRed);
     text-underline-offset: 0.3em;
 }
-
-
-
-
 
 /*#endregion ============================== SECTION  BLOG ==============================*/
 
@@ -827,7 +823,7 @@ h3 strong::after {
     font-size: 0.875rem;
     letter-spacing: 0.045rem;
     font-weight: 400;
-    color: var(--secondaryColorLight);
+    color: var(--secondaryColorWhite);
     margin: 0;
 }
 
@@ -835,7 +831,7 @@ h3 strong::after {
 
 #section-newsletter h2 strong {
 
-    color: var(--primaryColorLight);
+    color: var(--primaryColorWhite);
 }
 
 .wavy-separator {
@@ -850,7 +846,7 @@ form {
 
 form label {
     text-align: left;
-    color: var(--primaryColorLight);
+    color: var(--primaryColorWhite);
     margin-left: 0.5rem;
 }
 
@@ -905,7 +901,7 @@ label[for="email"] {
 label[for="consent"] {
     font-weight: 400;
     font-size: 0.75em;
-    color: var(--secondaryColorLight);
+    color: var(--secondaryColorWhite);
     line-height: 1rem;
     margin: 0;
 }
@@ -1011,20 +1007,20 @@ td:first-child {
 td p {
     font-family: var(--primaryFont);
     text-transform: none;
-    color: var(--secondaryColorDark);
+    color: var(--secondaryColorBlack);
     font-size: 0.8rem;
 }
 
 td:first-child p:first-child {
     font-size: 1rem;
-    color: var(--primaryColorDark);
+    color: var(--primaryColorBlack);
     font-weight: 600;
 }
 
 td:last-child p {
     text-align: center;
     font-weight: 500;
-    color: var(--primaryColor);
+    color: var(--primaryColorRed);
     font-size: 1rem;
 }
 
@@ -1034,13 +1030,13 @@ td:last-child p {
 /*#region ============================== SECTION CONTACT ============================== */
 
 #section-contact article {
-    color: var(--primaryColorLight);
+    color: var(--primaryColorWhite);
     position: relative;
 }
 
 
 #section-contact h2 strong {
-    color: var(--primaryColorLight);
+    color: var(--primaryColorWhite);
 
 }
 
@@ -1058,11 +1054,11 @@ td:last-child p {
 #section-contact li strong,
 #section-contact h2,
 #section-contact li {
-    color: var(--secondaryColorLight);
+    color: var(--secondaryColorWhite);
 }
 
 #section-contact ul:first-of-type li {
-    color: var(--primaryColorLight);
+    color: var(--primaryColorWhite);
     margin: 0.5rem 0.5rem 0.5rem 0;
     font-size: var(--primaryFontSize);
 }
@@ -1094,7 +1090,7 @@ td:last-child p {
 
 .overlay-contact {
     padding: 2rem 3rem;
-    background-color: var(--primaryColorDark);
+    background-color: var(--primaryColorBlack);
     position: absolute;
     bottom: -2.2rem;
     right: 0;
@@ -1111,7 +1107,7 @@ td:last-child p {
 
 footer {
     margin-top: 3rem;
-    background-color: var(--primaryColor);
+    background-color: var(--primaryColorRed);
     display: flex;
 }
 
@@ -1121,18 +1117,18 @@ footer ul {
 }
 
 footer a {
-    color: var(--primaryColorLight);
+    color: var(--primaryColorWhite);
 }
 
 footer p>a {
-    color: var(--secondaryColorLight);
+    color: var(--secondaryColorWhite);
 }
 
 
 
 footer li {
 
-    color: var(--primaryColorLight);
+    color: var(--primaryColorWhite);
     font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 0.03rem;
@@ -1142,7 +1138,7 @@ footer li {
 
 .block-footer p {
 
-    color: var(--secondaryColorLight);
+    color: var(--secondaryColorWhite);
     font-size: 0.7rem;
 }
 
@@ -1161,7 +1157,7 @@ footer a:hover {
 
 /* On oblige les separateurs du footer d'appliquer cette couleur */
 footer .separator li::before {
-    color: var(--secondaryColorLight) !important;
+    color: var(--secondaryColorWhite) !important;
 
 }
 
@@ -1172,7 +1168,7 @@ footer .separator li::before {
     bottom: 0;
     left: 0;
     height: var(--heightFooter);
-    background: var(--primaryColor);
+    background: var(--primaryColorRed);
 }
 
 /*#endregion ============================== SECTION FOOTER ==============================*/
