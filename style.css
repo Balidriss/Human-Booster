@@ -827,16 +827,37 @@ label[for="email"] {
 }
 
 
-/* #section-tarifs .text-container {
-    --decalMarginTarif: 2rem;
-    margin: 0 1rem;
-    margin-top: var();
-    padding-top: 1.25rem;
+/* petite animation sur le CTA quand on hover */
+#section-tarifs .cta-with-icon:hover .icon-in-cta {
+
+    animation: 1s ease-in-out infinite shakeTicket;
 }
 
-#section-newsletter {
-    margin-top: calc(var(--marginSection) - var(--decalMarginTarif));
-} */
+@keyframes shakeTicket {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    10% {
+        transform: rotate(15deg);
+    }
+
+    30% {
+        transform: rotate(45deg);
+    }
+
+    40% {
+        transform: rotate(15deg);
+    }
+
+    66% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+}
 
 #section-tarifs .text-container {
     margin: 0 1rem;
