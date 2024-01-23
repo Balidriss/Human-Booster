@@ -8,7 +8,7 @@
 let index = 0;
 
 function slideToRight(currentIndex, directionIsRight, nmbElements, nmbDisplayedElements, container) {
-    console.log("currentIndex :", currentIndex);
+
     if (directionIsRight) {
         // on stop de count quand il y a déja les derniers élements affichés 
         if (currentIndex < nmbElements - nmbDisplayedElements) {
@@ -23,7 +23,6 @@ function slideToRight(currentIndex, directionIsRight, nmbElements, nmbDisplayedE
         }
     }
     moveSlide(currentIndex, container, distanceToSlide(container));
-    console.log("currentIndex :", currentIndex);
     return currentIndex;
 
 }
@@ -32,12 +31,10 @@ function slideToRight(currentIndex, directionIsRight, nmbElements, nmbDisplayedE
 function distanceToSlide(container) {
 
     const containerSize = container.offsetWidth;
-    console.log("fonction distance de slide ", containerSize, elementSize, containerSize / getFirstElementTotalSize(container))
     return 100 / Math.round(containerSize / getFirstElementTotalSize(container));
 }
 function moveSlide(index, container, widthPercentElement) {
 
-    console.log("movement", widthPercentElement);
     container.querySelector('.block-carousel').style.transform = 'translateX(' + widthPercentElement * -index + '%)';
 
 }
@@ -49,7 +46,6 @@ function getFirstElementTotalSize(container) {
     // premier element du carousel
     const firstElement = blockContainer.firstElementChild;
     firstElementComputedStyle = window.getComputedStyle(firstElement);
-    console.log(firstElementComputedStyle.marginRight);
     return elementSize = parseFloat(firstElementComputedStyle.width) +
         parseFloat(firstElementComputedStyle.marginRight);
 
@@ -58,8 +54,6 @@ function getFirstElementTotalSize(container) {
 function getNumberOfElementOnDisplay(container) {
     return container.offsetWidth / getFirstElementTotalSize(container);
 }
-
-
 
 // on récupére tous éléments avec la class carousel et j'applique le script du click sur les boutons créés
 document.querySelectorAll(".carousel").forEach(carousel => {
@@ -78,22 +72,13 @@ document.querySelectorAll(".carousel").forEach(carousel => {
 
     // nombre total d'éléments y compris les cachés
     const nmbElements = carousel.querySelectorAll('.block-carousel > *').length;
-    console.log(nmbElements);
-
-
-    console.log("nmb elemnt display", getNumberOfElementOnDisplay(carousel));
     buttonSliderLeft.addEventListener('click', () => {
-        console.log("left");
         index = slideToRight(index, false, nmbElements, getNumberOfElementOnDisplay(carousel), carousel);
-
-
     });
     buttonSliderRight.addEventListener('click', () => {
-        console.log("right");
         index = slideToRight(index, true, nmbElements, getNumberOfElementOnDisplay(carousel), carousel);
     }
     );
-    console.log(carousel);
 }
 
 );
