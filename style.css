@@ -707,6 +707,8 @@ section .text-content p:last-of-type {
     border-right: dotted 1px var(--secondaryColorLight);
 }
 
+/* == h3 == */
+
 .stat-block h3 {
     font-family: var(--fontUppercase);
     text-transform: uppercase;
@@ -729,6 +731,7 @@ h3 strong {
     line-height: 3.85rem;
     font-weight: inherit;
     margin: 0.2rem;
+    margin-left: 0.5rem;
 }
 
 h3 strong sup {
