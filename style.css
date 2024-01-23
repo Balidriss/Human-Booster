@@ -212,13 +212,6 @@ figure img {
     font-weight: 300;
 }
 
-.text-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 2rem;
-}
-
 .carousel {
     overflow-x: hidden;
 }
@@ -246,13 +239,14 @@ figure img {
     background-color: var(--primaryColor);
 }
 
+/* CTA avec fond blanc */
 .cta-white {
     border: solid var(--borderThicknessCTA);
     color: var(--primaryColor);
     background-color: var(--primaryColorLight);
 }
 
-/* balise div contenant l'icon, permet de créer le fond rond sans avoir l'icone hérité de la bordure ronde */
+/* balise div contenant l'icone, permet de créer le fond rond sans avoir l'icone hérité des bordures rondes */
 .icon-in-cta {
 
     background-color: var(--lightOpacity);
@@ -372,6 +366,7 @@ nav ul {
 
 }
 
+/* fleche du bas indiquant un menu déroulant */
 .salon-nav li span {
     letter-spacing: 0.03rem;
     font-size: 0.75rem;
@@ -386,6 +381,7 @@ nav ul {
     display: flex;
     color: var(--primaryColor);
     align-items: center;
+    letter-spacing: 0.04rem;
 }
 
 nav .ticket-icon {
@@ -509,7 +505,18 @@ h1 {
 
 /*#region ============================== PRESENTATION + STAND ==============================*/
 
+.text-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+}
 
+
+#section-presentation .text-content {
+
+    padding-bottom: var(--paddingCTAHeight);
+    justify-content: space-between;
+}
 
 
 
@@ -527,10 +534,7 @@ section .text-content p:last-of-type {
     line-height: 1.5rem;
 }
 
-#section-presentation .text-content {
 
-    padding-bottom: var(--paddingCTAHeight);
-}
 
 #section-presentation h2 {
     margin: 1rem 0;
