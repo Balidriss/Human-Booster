@@ -18,7 +18,7 @@ function slideToRight(currentIndex, directionIsRight, nmbElements, nmbDisplayedE
         }
     } else {
         // on stop de count quand il y a déja les premiers élements affichés
-        if (currentIndex > nmbDisplayedElements - 1) {
+        if (currentIndex > 0) {
             currentIndex--;
 
         }
@@ -33,7 +33,14 @@ function slideToRight(currentIndex, directionIsRight, nmbElements, nmbDisplayedE
 function getNumberOfElementDisplayed(container) {
     const containerSize = container.offsetWidth;
     const blockContainer = container.firstElementChild;
-    const elementSize = blockContainer.firstElementChild.offsetWidth;
+    // premier element du carousel
+    const firstElement = blockContainer.firstElementChild;
+    //on calcule la largeur en rpenant compte les margins
+    elementComputedStyle = window.getComputedStyle(firstElement);
+    elementSize = parseFloat(elementComputedStyle.width) +
+        parseFloat(elementComputedStyle.marginLeft) +
+        parseFloat(elementComputedStyle.marginRight);
+
     console.log("fonction get number to display", containerSize, elementSize, containerSize / elementSize)
     return Math.trunc(nmbElementDisplayed = containerSize / elementSize);
 }
@@ -59,8 +66,8 @@ document.querySelectorAll(".carousel").forEach(carousel => {
     buttonSliderRight.classList.add('slider-button-right');
     buttonSliderLeft.innerText = '<';
     buttonSliderRight.innerText = '>';
-    carousel.appendChild(buttonSliderLeft);
-    carousel.appendChild(buttonSliderRight);
+    carousel.parentNode.appendChild(buttonSliderLeft);
+    carousel.parentNode.appendChild(buttonSliderRight);
 
     const nmbElements = carousel.querySelectorAll('.block-carousel > *').length;
     console.log(nmbElements);

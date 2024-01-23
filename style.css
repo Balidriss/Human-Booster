@@ -223,10 +223,11 @@ figure img {
 .block-carousel {
     transition: transform 1s ease-in-out;
     width: 100%;
-    order: 2;
     display: flex;
     z-index: -2;
+    justify-content: flex-start;
 }
+
 
 
 
@@ -234,7 +235,7 @@ figure img {
     display: flex;
     overflow-x: hidden;
     position: relative;
-    padding: 1rem;
+
 
 }
 
@@ -247,7 +248,6 @@ figure img {
     background-color: var(--primaryColor);
     border-radius: 50%;
     padding: 0.5rem 1rem;
-    margin: var(--marginIconCTA);
     color: var(--primaryColorLight);
     position: absolute;
     top: 50%;
@@ -482,6 +482,7 @@ h1 {
 
 
 #section-carousel .carousel-text {
+    padding-left: 1rem;
     margin-left: 5rem;
     position: absolute;
     z-index: 1;
@@ -696,6 +697,10 @@ h3 strong::after {
 
 }
 
+#section-blog article:first-of-type {
+    margin-left: 0;
+}
+
 #section-blog article p {
     font-size: 1rem;
     font-weight: 600;
@@ -707,6 +712,25 @@ h3 strong::after {
     display: flex;
 
     justify-content: center;
+
+}
+
+/* fait un effet fondu sur les bord droite et gauche du carousel */
+.slider-button-handle {
+    position: relative;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) 50% 50%/calc(100% - 2px) calc(100% - 2px),
+        radial-gradient(circle, transparent 99%, #ffffff 100%) 200% 0/100% 1%;
+
+}
+
+
+#section-blog .slider-button-left {
+    left: -5rem;
+
+}
+
+#section-blog .slider-button-right {
+    right: -5rem;
 
 }
 
