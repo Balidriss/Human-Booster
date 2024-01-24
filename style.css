@@ -37,12 +37,12 @@ ils me permettent surtout à m'éviter de devoir chercher les valeurs dans le co
     /* ====================================================================================================== */
     /*=== CTA === */
     --paddingCTAHeight: 1rem;
-    /* !! Ceci influence la distance entre le rond et la bordure des CTA qui ont une icone !! */
-    --marginIconCTA: 0.2rem;
     /* changer la proportionalité entre le padding en hauteur et largeur */
-    --paddingCTARatio: 2.5;
+    --paddingCTARatio: 1.8;
     --paddingCTA: var(--paddingCTAHeight) calc(var(--paddingCTARatio) * var(--paddingCTAHeight));
-    --paddingIconCTA: calc(var(--paddingCTAHeight) - var(--marginIconCTA));
+    /* La petite distance entre le fond des icones dans les CTA et la bordure*/
+    --borderThicknessAroundIconCTA: 0.3rem;
+    --paddingIconCTA: calc(var(--paddingCTAHeight) - var(--borderThicknessAroundIconCTA));
     --weightCTA: 700;
     --fontSizeCTA: 0.75rem;
     --borderRadiusCTA: calc(var(--paddingCTAHeight)*2);
@@ -298,7 +298,7 @@ figure img {
     align-items: center;
     display: flex;
     padding: var(--paddingIconCTA);
-    margin: var(--marginIconCTA);
+
     margin-right: 1rem;
 
 
@@ -312,6 +312,7 @@ figure img {
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 0;
+    border: solid var(--borderThicknessAroundIconCTA) var(--primaryColorRed);
 
 }
 
@@ -370,7 +371,7 @@ salon = deuxième ligne
     top: 0;
     left: 0;
     height: var(--heightMenuAbout);
-    background: linear-gradient(to left, rgba(25, 24, 25, 0.08) 0%, rgba(25, 24, 25, 0.01) 95.63%, rgba(25, 24, 25, 0.00) 100%);
+    background: linear-gradient(to left, rgba(25, 24, 25, 0.08) 0%, rgba(25, 24, 25, 0.01)47%, rgba(25, 24, 25, 0.00) 100%);
 }
 
 
@@ -508,6 +509,10 @@ h1 {
     border: solid var(--borderThicknessCTA) var(--primaryColorWhite);
     margin-left: 0;
 
+}
+
+.cta-carousel .cta-with-icon {
+    border: solid var(--borderThicknessAroundIconCTA) var(--primaryColorWhite);
 }
 
 .cta-carousel .icon-in-cta {
